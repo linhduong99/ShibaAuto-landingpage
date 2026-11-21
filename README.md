@@ -32,6 +32,30 @@ Tìm chữ `TODO:` trong `index.html`, có 5 nhóm:
 - **Giá bản quyền**: mặc định để "Liên hệ" để không phải sửa trang mỗi lần đổi giá. Muốn hiện giá cố định thì sửa `.price` trong `<section id="banquyen">`.
 - **Ảnh chụp**: hai khung giao diện trong trang được vẽ bằng CSS (class `.shot`), không phải ảnh thật. Có screenshot thì thay bằng thẻ `<img>` vào đúng chỗ đó.
 
+## Favicon
+
+Favicon và logo (ở nav + footer) dùng chung ảnh đầu Shiba, nhúng thẳng vào `index.html` dưới dạng base64 nên trang vẫn chạy độc lập một file:
+
+- **Favicon** 64×64, nằm trong thẻ `<link rel="icon">`
+- **Logo** 96×96, khai báo một lần trong CSS `.logo .mark` rồi dùng chung cho nav (38px) và footer (34px)
+
+| File | Dùng để làm gì |
+| --- | --- |
+| `icon-source.png` | Ảnh gốc 1254×1254, nền trong suốt |
+| `make-favicon.ps1` | Script tạo lại toàn bộ icon từ ảnh gốc |
+| `apple-touch-icon.png` | 180×180, cho iPhone/iPad khi lưu ra màn hình chính |
+| `shiba-icon-512.png` | 512×512, để dành cho `og:image` khi share link |
+
+Muốn đổi icon khác: thay `icon-source.png` rồi chạy
+
+```powershell
+powershell -ExecutionPolicy Bypass -File make-favicon.ps1
+```
+
+Script tự cắt viền trong suốt, chừa 6% padding, xuất các kích thước, ghi base64 mới vào cả favicon và logo trong `index.html`, rồi đọc ngược lại để kiểm tra ảnh giải mã được.
+
 ## Triển khai
 
-Trang tĩnh một file nên deploy ở đâu cũng được. Nhanh nhất là GitHub Pages: vào **Settings → Pages**, chọn nhánh `main` và folder `/ (root)`.
+Phần trang web chỉ cần `index.html`, deploy ở đâu cũng được. Nhanh nhất là GitHub Pages: vào **Settings → Pages**, chọn nhánh `main` và folder `/ (root)`.
+
+Các file PNG trong repo không bắt buộc phải lên hosting — thiếu chúng thì trang vẫn chạy, chỉ mất icon khi lưu ra màn hình chính iPhone. Riêng `apple-touch-icon.png` nếu muốn dùng thì để cùng cấp với `index.html`.

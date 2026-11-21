@@ -1,0 +1,27 @@
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs & temp
+*.log
+*.tmp
+*.bak
+
+# Build / package output (nếu sau này thêm)
+node_modules/
+dist/
+
+# Không commit file cài đặt / gói phát hành
+*.exe
+*.zip
+*.rar
+*.7z
+*.msi

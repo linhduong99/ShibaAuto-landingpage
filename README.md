@@ -20,7 +20,6 @@ Rồi vào http://localhost:8000
 
 | Tìm | Nội dung cần thay |
 | --- | --- |
-| `shibaauto.example` | Tên miền thật cho `canonical`, `og:url`, `og:image` và JSON-LD |
 | `Hướng dẫn cài đặt` | Link hướng dẫn sử dụng (footer, đang trỏ `#batdau`) |
 | `Shiba Auto V1 &amp; V2 · Client` | Badge ở hero, thêm số phiên bản nếu muốn |
 
@@ -60,6 +59,39 @@ Script tự cắt viền trong suốt, chừa 6% padding, xuất các kích thư
 
 ## Triển khai
 
-Phần trang web chỉ cần `index.html`, deploy ở đâu cũng được. Nhanh nhất là GitHub Pages: vào **Settings → Pages**, chọn nhánh `main` và folder `/ (root)`.
+Tên miền: **https://shiba-auto.com** (đã ghi trong `canonical`, `og:url`, `og:image`, `twitter:image`, JSON-LD, `robots.txt`, `sitemap.xml`).
 
-Các file PNG trong repo không bắt buộc phải lên hosting — thiếu chúng thì trang vẫn chạy, chỉ mất icon khi lưu ra màn hình chính iPhone. Riêng `apple-touch-icon.png` nếu muốn dùng thì để cùng cấp với `index.html`.
+| File | Dùng để làm gì |
+| --- | --- |
+| `CNAME` | Báo GitHub Pages tên miền riêng `shiba-auto.com` |
+| `robots.txt` | Cho phép bot tìm kiếm vào trang, chỉ đường tới sitemap |
+| `sitemap.xml` | Danh sách URL gửi cho Google / Bing; đổi `lastmod` khi sửa nội dung lớn |
+
+### GitHub Pages
+
+1. Repo → **Settings → Pages**: Source chọn nhánh `main`, folder `/ (root)`.
+2. Ô **Custom domain** điền `shiba-auto.com` (file `CNAME` đã có sẵn), bấm Save.
+3. DNS xong và GitHub cấp chứng chỉ thì tích **Enforce HTTPS**.
+
+### Bản ghi DNS (tạo ở nơi mua tên miền)
+
+| Loại | Tên / Host | Giá trị |
+| --- | --- | --- |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| AAAA | `@` | `2606:50c0:8000::153` |
+| AAAA | `@` | `2606:50c0:8001::153` |
+| AAAA | `@` | `2606:50c0:8002::153` |
+| AAAA | `@` | `2606:50c0:8003::153` |
+| CNAME | `www` | `linhduong99.github.io` |
+
+Xoá các bản ghi A / CNAME mặc định (trang đỗ của nhà đăng ký) trước khi thêm. DNS thường nhận sau vài phút đến vài giờ.
+
+### Sau khi trang chạy
+
+- Thêm trang vào [Google Search Console](https://search.google.com/search-console) (loại Domain, xác minh bằng bản ghi TXT), rồi gửi `https://shiba-auto.com/sitemap.xml`.
+- Làm tương tự với [Bing Webmaster Tools](https://www.bing.com/webmasters) (có thể nhập thẳng từ Search Console).
+
+Các file PNG trong repo không bắt buộc phải lên hosting — thiếu chúng thì trang vẫn chạy, chỉ mất icon khi lưu ra màn hình chính iPhone. Riêng `apple-touch-icon.png` và `shiba-icon-512.png` (ảnh share link) nên để cùng cấp với `index.html`.

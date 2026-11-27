@@ -1,6 +1,6 @@
 # Shiba Auto — Landing Page
 
-Trang giới thiệu Shiba Auto, phần mềm hỗ trợ Võ Lâm Chi Mộng bản web (H5) trên Windows.
+Trang giới thiệu Shiba Auto — auto VLCM cho cả bản Client và Web H5 (Võ Lâm Chi Mộng, Võ Lâm Chân Mệnh, Mộng Chí Tôn, Mộng Kiếm Hiệp), giới thiệu hai phiên bản: V1 (ứng dụng Windows) và V2 (Windows, Linux, VPS).
 
 Toàn bộ trang nằm trong một file `index.html` duy nhất: HTML, CSS và JS viết chung, không cần build, không phụ thuộc package nào. Font lấy từ Google Fonts qua CDN.
 
@@ -16,15 +16,19 @@ Rồi vào http://localhost:8000
 
 ## Cần thay trước khi đưa lên mạng
 
-Tìm chữ `TODO:` trong `index.html`, có 5 nhóm:
+`index.html` không còn comment, nên tìm theo các chuỗi dưới đây:
 
-| Mốc | Nội dung cần thay |
+| Tìm | Nội dung cần thay |
 | --- | --- |
-| `TODO:DOWNLOAD` | Link tải gói ZIP (3 nút: nav, hero, cuối trang) |
-| `TODO:VERSION` | Số phiên bản hiện tại (badge ở hero) |
-| `TODO:CONTACT` | Zalo / Telegram (3 nút gói bản quyền + footer) |
-| `TODO:GUIDE` | Link hướng dẫn sử dụng (nút cuối trang + footer) |
-| `TODO:LEGAL` | Điều khoản, chính sách (footer) |
+| `shibaauto.example` | Tên miền thật cho `canonical`, `og:url`, `og:image` và JSON-LD |
+| `Hướng dẫn cài đặt` | Link hướng dẫn sử dụng (footer, đang trỏ `#batdau`) |
+| `Shiba Auto V1 &amp; V2 · Client` | Badge ở hero, thêm số phiên bản nếu muốn |
+
+## Liên hệ & SEO
+
+- Mọi nút tải Shiba Auto (nav, hero, khối liên hệ) và mọi nút liên hệ (gói bản quyền, FAQ, footer) trỏ về nhóm Zalo `https://zalo.me/g/cuyyjpst6ssfei4cwmlu`.
+- Mã QR ở khối liên hệ là SVG inline (`<svg class="qr">`) mã hoá đúng link trên. Đổi nhóm thì tạo QR mới (vd. npm `qrcode`: `QRCode.toString(url,{type:'svg'})`) và thay thẻ đó.
+- SEO: `title`, `description`, `keywords`, Open Graph, JSON-LD (`SoftwareApplication` + `FAQPage`). Từ khoá (auto, auto vlcm, mộng chí tôn, mộng kiếm hiệp, võ lâm chân mệnh, võ lâm chi mệnh…) nằm trong thẻ `<meta name="keywords">`.
 
 ## Tuỳ biến
 

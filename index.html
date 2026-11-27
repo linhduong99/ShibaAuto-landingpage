@@ -1,50 +1,53 @@
 <!DOCTYPE html>
-<!--
-  ============================================================================
-  SHIBA AUTO — LANDING PAGE (một file duy nhất, không cần build)
-  ============================================================================
-
-  CẦN THAY TRƯỚC KHI ĐƯA LÊN MẠNG
-  Tìm theo chữ  TODO:  trong file này. Có 5 chỗ:
-
-   1. TODO:DOWNLOAD  — link tải gói ZIP          (3 nút: nav, hero, cuối trang)
-   2. TODO:VERSION   — số phiên bản hiện tại      (badge ở hero)
-   3. TODO:CONTACT   — Zalo / Telegram            (3 nút gói bản quyền + footer)
-   4. TODO:GUIDE     — link hướng dẫn sử dụng     (nút cuối trang + footer)
-   5. TODO:LEGAL     — điều khoản, chính sách     (footer)
-
-  GIÁ BẢN QUYỀN
-  Để "Liên hệ" thay vì con số, để không phải sửa trang mỗi lần đổi giá.
-  Muốn hiện giá cố định: sửa trong <section id="banquyen">, phần .price.
-
-  ẢNH CHỤP
-  Hai khung giao diện trong trang được vẽ bằng CSS (class .shot), không phải ảnh.
-  Có screenshot thật của VlcmWebAuto.exe thì thay bằng <img> vào đúng chỗ đó.
-
-  MÀU SẮC
-  Đổi 3 biến ở đầu :root — --amber, --amber2, --ember.
-  ============================================================================
--->
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shiba Auto — Hỗ trợ chơi Võ Lâm Chi Mộng trên PC</title>
-<meta name="description" content="Shiba Auto: phần mềm hỗ trợ Võ Lâm Chi Mộng bản web (H5). Quản lý nhiều tài khoản, auto train, Auto PK, phó bản, vận tiêu, săn BOSS, nhiệm vụ ngày/tuần trong một bảng điều khiển. Hỗ trợ Windows Server 2012 đến Windows 11, chạy được trên VPS; bản Ubuntu và macOS sắp có.">
+<title>Shiba Auto</title>
+<meta name="description" content="Shiba Auto — auto VLCM hỗ trợ cả bản Client và Web H5: Võ Lâm Chi Mộng, Võ Lâm Chân Mệnh, Mộng Chí Tôn, Mộng Kiếm Hiệp. Hai phiên bản: V1 ứng dụng Windows trực quan, V2 treo hàng trăm tài khoản trên Windows, Linux, VPS; auto train, phó bản, vận tiêu, săn BOSS, nhiệm vụ ngày/tuần, điều khiển từ xa trên điện thoại.">
+<meta name="keywords" content="auto, auto vlcm, autovlcm, auto võ lâm chi mộng, võ lâm chi mộng, võ lâm chi mệnh, võ lâm chân mệnh, mộng chí tôn, mộng kiếm hiệp, auto h5, auto vlcm h5, auto vlcm web, auto vlcm client, tool vlcm, treo máy vlcm, shiba auto, shiba auto v2">
+<meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0a0d12">
+<link rel="canonical" href="https://shibaauto.example/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Shiba Auto">
+<meta property="og:title" content="Shiba Auto">
+<meta property="og:description" content="Auto VLCM cho cả Client và Web H5. V1 cho Windows, V2 chạy Windows, Linux, VPS, điều khiển từ xa trên điện thoại. Võ Lâm Chi Mộng · Võ Lâm Chân Mệnh · Mộng Chí Tôn · Mộng Kiếm Hiệp.">
+<meta property="og:url" content="https://shibaauto.example/">
+<meta property="og:image" content="https://shibaauto.example/shiba-icon-512.png">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Shiba Auto",
+      "alternateName": ["Shiba Auto V1", "Shiba Auto V2", "Auto VLCM"],
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Windows, Linux",
+      "inLanguage": "vi",
+      "url": "https://shibaauto.example/",
+      "description": "Auto VLCM hỗ trợ bản Client và Web H5 cho Võ Lâm Chi Mộng, Võ Lâm Chân Mệnh, Mộng Chí Tôn, Mộng Kiếm Hiệp. Treo nhiều tài khoản, auto train, phó bản, vận tiêu, săn BOSS, nhiệm vụ.",
+      "keywords": "auto, auto vlcm, mộng chí tôn, mộng kiếm hiệp, võ lâm chân mệnh, võ lâm chi mệnh",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "VND", "description": "Dùng thử miễn phí, bản quyền liên hệ qua Zalo" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Shiba Auto hỗ trợ những game nào?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Các game nền tảng VLCM: Võ Lâm Chi Mộng, Võ Lâm Chân Mệnh, Mộng Chí Tôn, Mộng Kiếm Hiệp, trên cả bản Client và Web H5." } },
+        { "@type": "Question", "name": "Shiba Auto chạy được bao nhiêu tài khoản?",
+          "acceptedAnswer": { "@type": "Answer", "text": "V1 treo 25–30 tài khoản trên máy 16 GB. V2 được tối ưu để treo cả dàn: hàng chục tài khoản trên máy nhà, 100+ tài khoản trên VPS cấu hình mạnh, tuỳ RAM và CPU." } },
+        { "@type": "Question", "name": "Có chạy được trên VPS và Linux không?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Có. V2 chạy trên Windows và Linux (Ubuntu), kể cả VPS, và điều khiển từ xa qua trình duyệt trên điện thoại hoặc máy khác." } }
+      ]
+    }
+  ]
+}
+</script>
 
-<!--
-  FAVICON
-  Ảnh đầu Shiba 64×64 được nhúng thẳng vào trang dưới dạng base64, nên index.html
-  vẫn chạy độc lập một file — mở bằng file:// hay up lên hosting đều có icon.
-
-  Muốn đổi icon khác: thay file icon-source.png rồi chạy make-favicon.ps1 (cùng thư mục).
-  Script tự cắt viền trong suốt, resize, và ghi chuỗi base64 mới vào đúng thẻ bên dưới —
-  không cần sửa tay.
-
-  apple-touch-icon.png (180×180) là file rời, chỉ dùng khi người ta lưu trang ra
-  màn hình chính iPhone/iPad. Thiếu file này trang vẫn chạy bình thường.
--->
 <link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,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">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
@@ -82,7 +85,6 @@
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
   section{position:relative}
 
-  /* ---------- helpers ---------- */
   .eyebrow{
     font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
     color:var(--amber);margin-bottom:14px;display:flex;align-items:center;gap:10px;
@@ -94,7 +96,7 @@
   h3{font-size:18px;font-weight:700;letter-spacing:-.01em}
   .lead{color:var(--muted);font-size:17px;max-width:62ch}
   .center{text-align:center}
-  .center .lead{margin-left:auto;margin-right:auto}
+  .center .lead{margin-left:auto;margin-right:auto;margin-top:16px}
   .grad{
     background:linear-gradient(100deg,var(--amber2),var(--amber) 45%,var(--ember));
     -webkit-background-clip:text;background-clip:text;color:transparent;
@@ -126,7 +128,6 @@
     font-size:19px;margin-bottom:16px;
   }
 
-  /* ---------- nav ---------- */
   header{
     position:sticky;top:0;z-index:50;
     background:rgba(10,13,18,.82);backdrop-filter:blur(14px);
@@ -134,9 +135,6 @@
   }
   nav{display:flex;align-items:center;gap:30px;height:68px}
   .logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:17px;letter-spacing:-.02em}
-  /* Đầu Shiba dùng làm logo. Ảnh base64 khai báo một lần ở đây, nav và footer
-     dùng chung, nên không bị lặp chuỗi base64 hai lần trong file.
-     Ảnh do make-favicon.ps1 tạo từ icon-source.png — đừng sửa tay chuỗi dưới. */
   .logo .mark{
     width:38px;height:38px;flex:none;
     background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAADeuSURBVHhe7X0HeBXVtv8QQoyHNNILSeg1hIT03knoSJGigoioYG9XmigoXrk0kd57RyygYEGxooD03nsPIPWcmf2b+X9r75lz5kyC13vfvf9333vu79vfnMyZM7P2b9W99toTSfqz/dn+bH+2/1mtb2FhaJuGkXnFEX4tOzaKTX+qpCTEes3/9kYYtG0UkZ4f4deyfb3wnKdK0v/9GPTr0sWvLDZwYmGY7Wp+sJeWHeCp5QR5aflhtvKW0QHr2taLfHRYly7Vrb/739Ke79DBv1398H6l0QEbckO9r2YFemlZAZ5aHsfAu7wsNui9V9u187H+7l/SeuQmBRXX9NtWFFxNS7pf0nKDPNA21hsFodW0FvdL/FxeYDWtKMJ2rEP9yJfmDht2n/Ue/1PbG/363d+6TvBrReG207mB1bQW3pKW4iNpJeFeWpsYb2QEeCDRW9IKgjw1woi0w3qP/3Irrun3VX5gVS3Z5oHRbSJxZHQSyqdm4MToZHz1QmO8XhiG/GBPNPeStMKgalpxpO+u9k2i21nv8z+ttakX1bk4wnYgJ8BTS7hP0tpEe2NM+yj8NLApzo1PwdUp6dj3diLeLApHgreE3MCqWlF0wEZN06y3+udbaUxw36IQL40esOCROlBXFkJdmAd1bg7UeTlQF+dBXZKPE2NTMbp9TWQGeDCSkuJwb62sVsiMPv8utfw3th5ZWQHFMQFzC4K9OPAtI70wv1ddDri6JBfqohwx/jnZUBflQl1RiCldYkkAWUmol9a6Xnh/6z3/qdavbdv780JtJ0nFXskOhrosH8qcHNhnZfPumJkFxyzR1QW5UJcXYN87SXg6JRDx90labo2qWsuafnseTm0ab733f2rr2KR2SkG47UCmnwc3ryPLInBpUhrUZSR02bDPyIRjZqYYNx9/NhgxY3Eenk0NYsk2SSuMtF3s1SHX33rvf7i1qhv6eEFQNS0zwAOH3kmCuiiPP1B0F/icEJ0orhGLcrH40brIquHJ0nwkrTjC+3r7htGdrff/T2tltUN75od63yGBax3lzTa+0pQLnTo/B/YZWbDPNHqm3l3n1IU52DciEen+HigMrqa1rh/xjPX+/3ArDLdtIgdLNl5dmg95ThZzzM1hjpnpcEyOh2NSPOzTUp1EEAPoqJBqrijAnrcTWac6NkZqXBjmrZXVC3ne+oz/lFYaGziITE4zL0kbkBSA8xNSOfgkXMbYuODR39NS4ZgSz+yTmsE+LUV8PzOTC9+g3FAQZoURPr/+l3xB5+Z1m+SFeCHVp4q2eUg8Z4B9NhGQwhwLyyD/PA7y16/DMacQdmIElwgyTS5i1SV5KJ+cjgFJgSzeS9KKw+7TymqHDLc+67+7tYwJHEOhNYH/11YRjM3P4SbVLOG8z8iAY1IzOBaUQf5uBJO3TmL2xe1hn5wotGBxLn58NQ4tbFW0glBv7YFmddOsz/rDrbRW0JAs/6paz4Y+cMzOBpufw+wz0znA8vGvoMjXodgvQ7m4HfIXr8I+JcGlDToDOFELcqHMz2FvFkcwGiA59LLageOtz/vvaiWxgdMpvEzwlrSZ3WJ5QIF5JvC56cmGfWoSHNNSIH/3NpQre6DcvQzFcQ3yxR2wz2/FNUGZnYW7MzLRtZ4Py/L30MpqB42yPu8Pt6II2zcUzbz/QDRTlxYIxzspHvK3b0Oxl0O+dgTK9SNQbp0RjNi9SJigKS0EwbqDonOYn0vqzMa0jQYxgWxkaa2AcdZn/v9upbWCZubW8KTYHsseq8u4mZ1NtOv0cwbQuBNgn98S8uG1Yqw3TkKh8VMnLHYtgn1yc24FSOvHtasp5gYRvtusz/xD7eH0+JD8UO8bKT5VtJ8HN2Nk2xwzM+CYnQP53GYoN09Dvn4E8o3jUH47CuX6USj2K5BPboRjfinskxN0cyQcNh3ZXDJJ+Xi/YwyZI+6oSmIC3rI++/9XK4mtMYEmjy1sElY+Xo+RzzLsPdFumFESOseyLlAubINy95IA/fpRMXYa92/iaF/SEfapyTwA+enVOCRXr6LlhnjLXRIb17U++++2DvWjWuUEemltY7xxfVoGw9wc2KcmwrH2aSi3z4sHEwEXdwtibp0S2nDnIifUsbiDiwkmG8rDtSX5GN8+mlGYWkjmKCboZevzK2s0ze/WvEFsWf2oZq0bRGYUBHnl5IdUzezQIDKjbaPoRPquT0bGH5pzlEQHvpEX7KU195Y0itYofJZ1k2l0Dv7k5nCs6A6lfB+U2+cgXzsMhcbKx75HHGncdy/D8f1IkFPG3GyUv5+G1jW9KQrUWtaO6Gl9/t9tZTGBb6dWr6I9nxHE1KV5zCBG3j5bgHz7NOTD30JeNpwp6yYy5dgPUO6cEcQQgy5uh2NRW9inJTI3JswymFCAkS0jOBNKwry11nXCepuf3z8nqWabuhHtimID3yyK9F2dH+a9PTfE62xmoNedNP9qWppfNS3d10NL8/HQMvw9tYwaXlpmDa+7WYFeZ3NDvbcXRvp8WBYbMKJDvbC2j+fGRZnv3bJ22NNFofdxhzvtwVioywp0s6ObHMN0Tk6AY2kXKFf2CTNLkk9jPLUF8rrJkJe8AWX3Oo4FjVk+8hkcM5IYj4bm5+CZlEBGWlAQ5TfR/Pw/1Ioi/dZS6CgIzOfenwiTT/8gzM/NE5C/mMrkhYOYvHAIlEVDoGxdDeXWSWGS7lyAfO5n2OcVcedFkxc+gSEfQT5hXg6wOJe9kh3C4sgnhHkrbepHPVISG9S/ZZTPxrxg75upvlW1xPuraDSxyfDz0IrCqmntY+/XujeorvWJ89X6xvtrjzf31/rE+Wk9Gvjw7wpDqmlpvlVEvuZ+iTMnN9j7Rssov29KYwOfbNsgoi+Fw/TMkaUR3F67TSyNOQ053AWtoFzcBuX2WaHxJHS7PuPAywuGQFn6JlM+HM2U8kNQbp6CfGUP7AtKeSBC953cKYY1v4/7gR+t+P5uG9ZlWLX8cNuRJJukffViE0Y347Hu0s5CCm6ehHxhN+QVbxERpAWQl74Bef5AKN8tgHLzhFBNihKOrodjehocM9LFRI1LmGAEFubi5qwsNiA5kKX5eWhZgdW0JFsVntijRNfjCf4Y1z6SfdS/Aba+Ho9TY1NY+aR03J6eyaMNzBEzUGVuNrs9K4uVT81kJ8akYMuQeKx+sgEb3TaKPRbvj6LQapyJKdWraGRW03w9tL9kh0CelwM2T4DvNrmcngr79HTIxzcIbSeBIin/ZQXkBYMEA2jM1JcMY/Kxn6DcPsW1xPHRY9z0Embrn2vMaCadH2678A9lSR/JahGdH+J9hxJL+0cm8jDSMSUBjnUvcjtINlA+9iPkxa9DMQjhTHhTEPjtPMg3TkC+cQyKoxzKr9PhIFtqnjlyTciG+nExW9irLqstSawkwgtDC8Ow7rlG7Oz4FKjzyGnn8sGoC3N57oXNzoJCYTDv2dx0yLNzoMzOBvkplaItunZpPjctpGmnRqdg7YBGGJQXguIwT9SRJHz4RAOoqwoF+DSxdEp/JhwT4yD/OpMHFcpvxwS4Py2FMn8QH6eybIRrzAuHQN6+RjDozkU4NgyFfXI8p2HX8ERkBVTV8kK8WY+k+g2tON+zdWgQk0GS0i7mfq18cgYfBAEo/zhat/9noOz9AvKiIS5CeCfCRkAmQkkTSGVvnODmyPHZc5wwV3hKGpCHT55siIca+WDJY3XZ+feF6vI+L4eDbORd3Kb9PC4XfzujFjJxJgdqdGKSOo+YmA91cT7Ojk/Dwl51KU7HpwMaAYvzGM1xBANy+CRLXvcClLsk+ce5zZd/Wcm1m4O/XIyRmECflYVDIf+4FDIx6c5FyFsm8wwB0X9xQiori/QCD2YaRBZacb5nax0b3DXTz1Pr1dSP0QRKnpMNx9QEJu+Yy8HkRO1YA3nB4IrgU186HMqCQVB+/VA4rVtnoVzeDce8EtzVp+1sTjZOjknBp/0b4NaMdKYuz2PqfEpx6E6QmytrN4ObCcc9QDf8DWeS+RpiBmnI8gJcn5aFTwc0xunxqYzNyxYaMCMNjvklnFbudO+chbLzMygk5QS2E3zSAjFmZdHrkL+dD5l8H/m9fcv5hJRSMTQh697AB5n+VbXimKCHrTjfsxWG+z+dWt1DeyY1iFHyjed/picx+eDHwgQRA379CPJCnQFEmNGJAcZx0VAohzaKgdAcgSYr04RDJg24OyuTqQtywOZkMQ6oDiyf7jul3iX9Zh/iAlk3Z5UxwNqdWkTmikxVHu7OymaO2Vk8cnFMT4G8Z6nwXaTlJ36GsvQNAfiKt6Esf8s5Ts4M6sSAr2YKv0dh6pHPYJ+WDHlWJjeZT7aowcjnFEcHvmbF+Z6tMMp/RLKtijakIJyrLSduBjmlL3XJOAN564fC/nFCBGGCQL2veBts+VtM/XQcU28eBdSbkI99AcecHGafkS4A1SMOAb6r22dSxOUOvrnza9yAtWpBJeBTFMe7uCeX+Nk5enKNpD8Djrm5jAAkWlX7GaifvgdmgE8BB3WrsC0cCuWLGYIBt85APvk17NPTIM/M4BMyivLI+RdG+f3xlERBhO8k8t6j2kTxqTmfAc/KgnLqWx6CcunYsZYpi4cwp8SbwGcr3ob62Ximrn+P7Rv9DFYMegJHVw+EsjCXg89B18NRA2RDuiuaHXdNEKkBHdTplTHAdL2VCdN1BnC/YuSrsniei89zpqdDmZ2JYx8OwZIhT2Pfu09B/Wwc1LVjwFa+LaI+QxN0c6uQlm+YDeUWZwCTT30vNHgGLdzk4c2SCMajutigGVac79nywn1mEQN4DmhFPiOJJELlU9+JeJc8/t4vdAYYJkhogfrBX6GuHYfvh/dF78QGrH0tX3zaPxZ3pyXAMSeDOeYKe+s0G4ZkGgDrTKkAvvManQEEpgnQioww+wLLZyejdA10W9NIx90p8VjTryY61fLBo4n18cPwPlA/HcvH5gReFzzOAPIBt09CuXWa0TxJ3DedR2J/bRXFGVAU5TfHivM9W3agF2fAlK4xggGzMmCflQn51EahARSGHv4WjkVDucMl8Eky2Afv4Nayt/BWmxQ09pBY76Y2dn6SIEQMziX5RsjnAtBqdgzAzJ/1CMgMuvFbM8DOlIIJcNP3zueaniXyPuJaEhCafJ57LxUPNfRGUw8Jb7dLxS3S7pVCAwxTRA5a2bRchKo0QT39PWHFNZ004G9tokBY5oV6z7XifM+WFeg5WzAglqnLDQ1IY/KJr4QPoIkYTceNSRgRQmZn3XisebErakkS69HIh92cnUWTOGaAYAzQ5TT1wRsS7sYEizmxMsbanb9xz+e4eiX31ZnHtc25huHqFIDcmJ6N7g19WIwkYf2r3RlpgmF2uSkiDdi+RoSh5ANOfAP7tDQYDBjdVjDgH9KAnGCv2ZRKndgpmoeHJP32GclMPkwTjnN8ciJf3g959SgxAyZiVr4NdcMkbBjSC3GeEpJsEj7u35BhUa4rcnECYMTtZlBdDHDMzmSuRR13X+H8nen3BoAVQa+km5cVTcxzzDIxQb8fCc+qJxqwBG+JxXlK7NuhjzD1y4kkbExo/VtiVkyRHoWht89CPvwpj4LoHqT5o1pHsuT7Ja00NnCaFed7ttyIAM6AMe1qMp4HosFNbc4cOxeIeQBPxZ6AQrmgxa8Dq0ZCXf8evhj4ENL8vdE+1hsbX21KM0wxmXICYGKA3ikEdGMEdRMI7r+1MFF3ymbzYf7efd5wj25mKBcAXSNoEjc3m9nn5bAvXmjCyqK8WZq/DV8NeRjqFxMYVr0jmLByJOSz20Vq+s4FJu9dyuzTExiF7qQBw4vDWYqtilb8D0ZBE8lxkAcXCzFZPM0q/zhG5MN52vkMU7Z+yLB0GHdQc/qUsTqSxF7NDsL1GZmMZp5OAKw22SyFZtvrBM+QSrNzrAQ8J/gijVDhO+NeFbTGfD+DJuN7IxLT7zE7G+rKfHZ5YhqeTgrgaYz5j7fh0RFWvsXktRMEHpSso1TE5omwT24GeW4WozD0tewQUFaZ1putON+zlUbXeJNi1xcyQ5i6uEAMjnI5619yacDNk8D57Rz80Q9ko64kYXbPWFERQQkup0RZbb7ls8UfmLuTASZGuN+jst/d4zuzuTHubzrye7tVPehdp4/Sy+QTpnaJQW1JwvgH86GueZdh62rGHbC+FuLYMISnImRKFs7LxVMtaiDTr6rWqnZIXyvO92wtY4L60Y96NfNnbEEuo1kdt2vLu0DmK0DHwG6egKpewTsPt0VjScIXzzeEujyfJ8qcg7VENu6hpT5AuobWkifFcS2zT6HFbTMDTCliCzg01XdJtzHJsvgMJ/gZfOGcL6jTcyY1547SjQGcnsoYKTqlT9TlefjoqfpoSEzoVsDUW0cYI/tPuNw8DcfqR+CY2oJfe2dGFk9FUP1oWb3wEivO92xt64WXZAVU06j2kyoaMJsI0OcCtB5w6wxU9TomDnkBCZ4SfnqtKdSltGQpBu4E2iRxzr+Nc5xRaXwJz7G2P+TNkyFvGg/HB70FE8ylLk4QLMDMICZUEpaagafjtBTcpcWVj/pC/vk9/izHJ0/BPiVJPMfJRPPkzky/S/tk0obl+dj4UmPEeUiY+c4gqOo1Pj+itQP7XFo7Sec5p3MT0lhphBcVMKNzo7pNrDjfs3WLb1g/J9hbyaxRVaO6R3W+bsNJtbZMharKWL9wCpI9Jfw8sImYLevqW4EJlgG4OklsKpPJsVPmkXyL/ZLIp+xaKJ6nJ+7uKZVOwPX7cwCNlIMeUZHmUtp69xIRwVGeh5519xLkbbMFE6ZT2OieqjC6CAZc4zG0kYKTjS824gL4zQdzoKp2yHuXMfu05jyCo3T01qHNWbpfFa0gzLv8xZYta1hxvmcb88IL3gVhttO0Xrr+ucY8J88ldloS8Fk/nD64FQXhPvj6ubrgE7UZuolwI9T0WQdIXKMfpzVnjs+fZ4qjnHH15Y7siMi/y9ch718lGKCD4m5+zBJq8g+cIcYMmXo6HNNSoRz8CIrjKjefvJKDL6of4wlCxyf9RU1TZUx2+h/TmPizBD2kCeuerI3CqABcOHMI+PpV2Kcl8PQ2CeXKvvVZ4n0SFSpvtWL8d1tBpP86qpMZ3yFKmBd6ML9xCQa2TcCCnlFuVWNu0qJ3I6Rzfs8HomsKMeCboUymRQ8DfCOa0CssHF++yoSt1k1WJWEpf47ZkTtNUQYcFDpvGMrLRtyf4SoncXzxsrOcxJBw9+dYx2ZEbeL5VEkx44FQDHuoFOoH7fW8GfmKfF4HRcuirWJqzLLi+3dby5jA16k49dE4Pyjzcnl+mxZmjvw1GXO7R3EVc9p1/eiUcLMTtAxGaAJdnwrHohKmXNopFnmo2sAMENXa7JzH7BPjTEysCIpLEyydwJoazygFzs2Ombk8YrkE5cJW2OcVwjEjlbnMmem+pu4+NlfnCz6L8rCwZ02cGZvCMSIHfHtWJutc18ZoE0s7S8HBH2odm9TMolK9DH8P7H83mdHyHjmW8slp7O5MsSbrTqROnKlzadfV1/jeUGH7bFp7TWTy6h6CCY6rIs9EE7xb54QZ+mqgkE6reTAiLQOcShjAJXZKc8gbBosKPloUomIqOtqvcvDlFV1hn9qi4v1NYzJ3gwnOv3lKO5vWpGGfk8WuUd6LKsSX5dO6NE9D5wV72alcxorv323PlpZ6FYTZTlBlxNQHa7Ebs7KxZ3gCX8Sm9VeXXTdLjDsDnN0MviFF1KkagWzmvGLImydCObsJypW9UM79DPm7YUws3qS7SaZgqg4ST/uazI5+zuU3aJElFY5vh0M+9wuv7ZHPbYK8eQIcc4vgmNJCrAVUAra4X2UMMC/gCwYQPRT3k5XY82YCbs7Owth2NfkeiaIIn01WbP9wK6npPz6ftt1EeKNPnD92j0gA5ue4wDcclMnsOMF1MsNVHcfjaJKQRaJ8XV2Yw9PTdqpCoOozilYWl4k12qkJLrPgBrLp/gbIHHgz+Kb5B52f0lzQsaAV7LQIMy2B8UUT8mm0wYToWZwvalj1+iA34C0FW66xuTqNm6o8tg+Nx6ON/VAS7sUKqES9TtgfXwmztkdS4usXhdtuN/GUtGldY/laKkmccEiVSbVp0E6gyHfQOmwhbs/KxqFRyWzz4ObYNiyR20xewbA4T+SMptNiTRozh4PuAOs+xXiOyTYbDHH+1qwVdA2PjijcJNqp2qKAA37uvVS2fXgi+2Vwcxz+azLuUnSzJI+XvFQ6M66ECWYMCKPx7aPR1FOi8PNqt8K0f36/WKek+g1T/TxvPtzYR7PPyeYq5pIKYyXJ+Cy0wTloOjcnm+eSrk/PxozutVnX+j4sq4YnUn09kOLrgcIwL76T5ssXmwrNMFIYZunTu4uhLvDdeyUTMtO9DCZxYVhSgO8HNmfPpQWzglAvqkliRE9WoCcerO+DuQ/Xxs0ZYqNJBVqMJUxj3Cb66G+qU7o9MwsP1quupfl7Xfun6kKNVhjp+z0VNH33apzYG2AmhhOgE8LBFwxwaoOejt02PBEP1LbxdG6Kj8QHm+zjgTQ/D9pLxtPWzbwkvJQVgmtTM8Skj2ajzmeZADYDbpZwk6S7McIEHAd/fi7sc3PxTlkkVS4z6pn+HkIgfCRGR6ItzkviZSu73k7i5Sz8Pk5p15cvneN00cX/1hdz1j/bmDbtaUWRfl9Zcf1DrXX9iN7J1T20lzKCdBNhsYNuzshdFel7+s2ONxKQHehJAPOceoa/B2sb6816NPJFlzo2Klzl39GWHqqW7t3UD1enZoDNI/W3rJBZQHWfcBkmy6DNpDU6Y5S5OXDMz8HLWSFUmc2yAjzR3Fvi24k61bbxRRcqRKaoL9Fb4kzICfbEHmKCrglC2EwbUEzPML4jYaQIkTZ4PJUYoGX4VdXaNozqZMX3d9uALnnV88Nsp9L8qmg7hjXnTqrCSpNFEpzSQGo4P4eVT81gnevYWD1JQstwL0x4IBo7hyfg6uR02Odks5tTM7B3RAImdanFyGEl2iQ08pQwpCCUqUupUs0i0TQrpqQdFXdRaDo9ifFzFOXMTGZUuc1ntPTdtGQ3rSGgSBund40l28xa2DxYQbAnxnWoiV3DE/Db1HTcmZPFrk5JZzveTMCYdlGsINSTaKcxoHxKBjctAmBXUOG0ABbtp047ZTYNjCcNp61Kh1YMG1bNivM9W6u6oS+mVPfQXs0J5pXRJP1m1augijzcS+N1NY6ZqUxdkcfWPduIUYr69YJwnHkvjW/jJEaKiUqOc1ehurqQnRiXwp5sUYNrAW2F/XlQHFOX5DJyyHwfGiXsFreDvP55yD+NgbxrMeRDayAf/ZyXushH18GxbyXkLVPg2DAQjhVdRJKNsp7T03jkdnxUErICPDgDHmrix/ZRySVtvluYC0axvFHaSBHR8nwQTVQ/WkuSsOHlpkxdlit2B/EMagYcVMtkAO6MnPQJoF46qS7KZQOSaoAquKnw2IpzpY3i/7xw21HaF7Z1SDNKtIkqhtl6BbHhiOjBJGlTmgvuL2oNx9IOcCxrw5S56ezSqEbY8lojsZ+Yakup7I/HzSRJZmnihEKZl4ORJeHI8PfED680BmY1h31+Md+DRrU6ytUDUO6cA7NfhqpchYqrPAvJO31WysEorUGz6uvHeGEtbSVyzG8JdWZzdnB4M7QM86JtpLhBDnZJgVPD3MNq3YQupDrTHGwe2ASXxzaGPDMZ9vn5zLGgmPF9clR2TxpHkRX9xhR8GEeKpr57OY6vCeeH+2zTNK2KFe8KrVWDiA5UFv5koj/A42IBGD2Ux9D0mQOfAMeqHpC3ToFM9ULle6FcPSgmOyc2AD+Ngrqslci/6+bArKKcqabohM8R5mbh4qiGYPPyIf/wN/AZMmUub5+Faj8LVb3Kj1dPbcfxHRtx4JfP2aEtX+Lk7m9x7fROUUxF19w9C5nPeC/zvVzyprFQ5hXiyugmUKgijpwxj2TcV+qsIa08uRnUZSXAt7TuuwbKxV+Zcmk7k8/+BJk07qvBfEJnf7+p2944rhm6VlFZ5yNNfJEeUE3r1KxejhXvCi0v3GcprQevfrK+2LJjTKQ4E3JoggTHkvaihI+m9pRToUoJSiH8dhzyb5RKoMGXQ7m8C/KXr4nFD75vzOSsTZ850VNaQJ6aCPWrV6Cc3yryNzdO8R0pKruA8lPbseDdwXiqKAUPNIxgpTEBrDjCxmhXfn6oN2tTNxTPlmZg4d+G4trZnVCV8yK/dOOUoOXCNqhfvQxlWgux2c4SVLgcKq1/J4nNKFSke36LYCRtOqHx3jgJmcpPbl8QwnF5Ny9a5kykHUEcfJezVlcVsPmP1OGzYnrRiRVvt0ZvOskO8jpXEuGl3Z6dyUtS7pKkGPH+1ATI618U5oAnuI7x9K5zs5452cX3EZwWefe9K+BY1E6sek1tIcoAyY5SuphyMZPi4FjeGbz2lJY8aXGDwLt2BHCcx4HN69GmbiTiJLLfkezFohT2Slkm+0urbDYgtznLC/Jk6TaJJXtJfHWuQ+NoHN3xNWA/x/excXpISIiWA6vhWNYJ9vfjONM5HQQeTQKJNtLYxW0pty9ooVITSxbVGDMfNzGYSvDP/AjHih4iENCFihaLqKqkfGIKKwmtpuWE2vYtX77cw4q7s9EWfdrq81BjX23qg7HshcxgRpuVKf/jmBIPeeObQhJMADm7kwGWtC+d4xvbDonS7ZU94JhNmVTa7poDxwcPi21PPEN5Qb/fYS757LejUOWLeL5dLppIEnKDPFnv5AbslbIsNrBNDnutdTZ7KjueFYR6s5waHsgJ8uS9qSThLw+WQmVUQGAIxVGxnKpnXmlhybHqITjmkH+iutA8YVIpJ1W+XzDLOZ6jUK7p3W1NwdSJ9t+Oi5W2iXEcs9PjUtizqTXYzAdj2EONfGgLlaNNQuN6VtydrSDctzvlL3IC+SYGNqt7rIhGjKyi/hACxyX1ViYcEbsnrYwg9SVGkImiZNvJr0WCjJsxWug/pjNVdLo/u3EMuHkc3ZMbIIXeREKSTiYnxIuVRPqwwlBvboJyAj1ZLoEf6MmvaeEpoW9hClTHOc5EQYvOCKKT6v51WmgbFdGinN8szCjfEXPCArDxW5N2m8dpaMRNKlo7DfuHfbkmEHaTO8fwapGcQE8tP7iaVhgdWGzF3dna1Q1tUhbtt4/2ZT2ZGMDDKHl6AnOs6imII/ung1OBAVbATcQJ6TPOHRMaxCvsqJpAB8Wt6wy+doQv/L/3Ul/WWJJYdhAHmgOeXcMD2TUE6Dl0LoiDzztpy8xhz0FVxUKMS5JNn2kMvL6JSgoNWo5ZrnNpjutv05iNcRsMoSOl0q/shX1eGZQZKWCL89kjcf6Mtl6VxQbs7NQ4PMaKu1vLCvf9kfYG/zI4HupimpGmQTm5UZge06JJBQl39srMkKXzwZuuNQ3GySidybhzGpdObEOruuGIlySWF8zBdgPc+JxH7yuSJHRtFotrZ3cBt0+60cnvWQkt7vS5TE3l3fJbQxjNzLh7GfL+1dyZUyj6/avNWIpN0vJr1vjairdba1M/shsPQZNq8PSsQnb/66HihuaHuJkZgyidwGuGtJgGxAlznaPvVeUCQNVkJlCszo73q4eh4hIOb9uAznF1WCNJYmk2CTmBwuYL0+OBdJvEbX/3xIY4uec7HjnJV3Vttd7TJLHst2OcFteYrIDfA3xT579zjo+Ox3ihgX3tAMiTEyic55sFaadMu0axD1hxd7bCKN8vKARd9WQDRtVgFCGIkvTTLk5bgXJ2E6EmsCsbAG6ewPZvVuPO5QPcRvPzFga7SRaForiE6xf2YOKgZ9GxUTQEEzwpu8oyfSR0ahyNKUOfx83L+93AdwPdHL1w8I/CfuUQdn67GqANhSZ6DUZUan74GN3H7zTJxpG2K1Gd6JQkvqa+4vH6lPzTSqID1llx5613cnJYTpD3zcIwL+3q1HSmzk9hjo+fEI7FINxJlPHZnWD3793BNK5Vb59C+YltLDvQCxtXzeR22unUzd24hwEcacLtU3yidfvSfmz76gOURvuz1nWC2M5vPsIdAl4th0p1+uYIzQDIAMkYC91PLcdPH89DbpA3Lh/bCvWO7pOcALszwiVIru/NTHB1/fUFN07Avrwb1LmpuPJ+CopCPOnVBVf7t8kKsOIvta8XlENvDGkbc7829+E67PLoxoz9OsX1bgTnA92Bt3az+XHXFHFelc/h4Ob1aO4hsYfSm/CyPvXuachXD5miIBN4JhCN81SDs/u7j5Bq82Bpvp7swKa1TFXvMANct9+43UPQwCd3d06D3T2LXlnxaCZJ7MDmzzlt1mvdx2f92zXWyujk2H3/Fi6OaoKZ3WJY25reWk5gNa19vbBUK/5Sca3g3LxQb43y9Cm+Ejvx1+ZQT9A2/HNuD3aLDtyclZnoygYvwCEpKz/+K5deilbe6P0AGE8zXAbj17szwQCUTASZFlW9gV0/rEXb+pGM3s9GqeW2DaLYnk2fMarWoxkwXVvBTOp08LmFehmQL+Ctvl3JbzCi5crxXzlt7gy0js/aK35v9jny7fNQDy7HoTcaUFaUpftX1XJCvbWWdYMzrPhL/fr18+yU2LBtWg2v3zrEVtN+m5kP9eIWfdJlgG92vOZowUyQ/nCzylsIV3EZI/s9yJ1mvIeEJ4vTsev7T6A69HyPeoWDJI70dznYzZPY98t6vPvco3wwDTwk1rNWAOsR688aSBJL9vVgo57rjf2bPwdunWTid+Z7lfNyStVxHju/X4P+LTOR4CFRyMqG9+3CfYwTQIMBxvj43+4YuJtZcV78xjRWKuE8/Q3KJ6SgXU0vep/FzXbx9R/ol5joacWft6LEWn6Jvp43utTx0u4saAW1fI/I7bgBbO2uBwo/oH+2mAPjb+q4ewblZ3aja3wdzoAUL4lHMf2KUjBt6DNYM3ssNiyfhs8XT8Li8cPYiKd6oGtqI75IQkzrUzuALWuZwM70LmVne5eyJUXxrFetABYnSWjiJbHOKY3YO08/jMXj38T6xRP5vT6ZPQZThz6LJ4rTkOErIZm0x0NineNi2eVT2xl06Td3N+21gG4ImMEsq5BxbG6ehnrhF9yYloNOtby0FH+vm71yf+dFfsXh90Un+3rc7hjrqd2Y1xrqtf1iVmi6aQVnpHPdTTLMgzCIc5MsSrBdxPljW/FwWlPWwkviy5OUy0mQJPIPoHNkosg+59sk9K/jj6nZjfBz1zxc6dcON/q1Y+d7l7ELj7ZiN/u1Y5f6tsFPnXMwKaMB6xfjw3K9JTJxLM5DopkxI2mnOUKSlwSaxNGxV3oznDuymfEw9OqhCgwwg31PJljAF3/r2BADLv2Kq1Nz0a5mNS0twPN21xa1o624O9tjmQkRWTW8fisMlrRzUwuZem23mP1aOWtlQIVzLmfsBN2NUFJrikKu4sjWL5Du5wVamzVyOdST/CQ83SgMO7rl43jvMlx9sj1uPNEeV/q2xrk+rXCmV0t2rncpO/doGTvzSEt2rldLVv5oGbvxWGtW3qc1O/xQMXb0KMJzTSJYC1+eCjBmzcjw80BWgBeO7/yG00ABgFPiK9FYJ92VMMbVXeN2MoBM0IWfcGJ0CisI8qAIqPyJ3NwgK+7ONmzYsGrZwd7HUqtL2pah8Uy9+KPrPTlm22YCXRBTkQEVuqEl5jkCj2iuY+LApyjT6QSf1pGT/CS2vnUKs/fviAt9ynD+8bYof7EHbgx5nN1552nmGPcyu0Ba0Lctc4x9id0eOYDdGPwYu/xsN5x9tBXOP1LCHE91ZJ+0TkGSL58zOCduzSSJmzpeVl5JCFxBE5yaazBAFy7n2HQsjDEa5+9cgHpiDX54sR5LqS5peWG2/b+bDaVWFOH7Jb1+eF73SKYeXaq/HcsMngGgScqtnDf1yr9zSRmlGm5c2Id29SOQQpOrIE9k1vBAcagX290ll13u1x6/DXoMjr+9AvbeYOD9oWDvDwUmD2aXBnRil/o/wNjEIWAThvDzbMJQOEa/gut/6cWuPN4OOx7MQ75+TwKfknqdm0bj1uWDIlVhkfDKmCCE548Im+X72xeg7p7KJrcP5usBJVG+q614V2ilMUFD0n08tH5xXkz97g0wmlBQybiT8y5gxdGkhlxS3EF3Xaf/1pJRFKboGj6ZOZpLJklqeoAHHoi04RyBO+ZV4P3XoYwbCHnsa/yojBsETByCy892ZZee7cLY+0OgjKXzA6GMHwT23iBg0utg417DqSc7ok2YeME2pSzID6xfMIE/s2Ji0QyiLiSmo8GAygTN2SkVQ/e7cRK4dgjKp8+iV30PRm+fLIsNfsGKd4X2YEK9+Lxgb/62qT0TOkO9sAkypYxNRLlx2rCZJqCt4Ju7a7CuTilnWjx5oiiZh4ZpfhK61wtm8vuvMXXCEAE89TF/cTIB7w9B+Us9WflLPRh7fzBngMyZIxhEjFAnDsWdsQPRpVYg0v0lJHpIeLZ1Fl9joFS3U8pNQJsZ4ALcZVr4OUuyjp/nOTAXFhQ9qqe/xK/vtCKt02jVrltik0ZWvCtteaG2TQnVJO2NVnWhHl4O5fw2kbc3CKxUYiqR9kq7odKuARMIFIfv+WENzW6RbJPQuU4Quz3+VaZOGCxA1YEnkOWxA0Gg/zaoD7s+qA/DxEHMkH7e9c/q+0NwY/TLrENsAEu1Scjw88ShLZ/zCKzCmkYl3Y1G89gryZa6xkwrgafATm+CumcuBhVGI4nMT6Tv72dCza1lbGiP/KBqGiW89i19A+qxtZAv7xV7gytVWfH594F3gW8dqNHJIU8e9BRtgGPFYd44N/JZphrSbWIANzcTBuP22wPY7bf7MzZxIJN1qRddZ8CkYTg9YgArCvWiLCqm8TWC6xYBcE+smcfAPxt+wXz973V6l8aFHVCPfIzdC4fyzC0tcrWpX7OjFed7NoqGCiJ8DiTSO5QL46Ee/BBs74dQyg+IhRkn4C5pEOpcmelxB9nd5poHfoRmsLDfOIFH0puw+pLEvn+6O9TJbzhNkDxGdM6A8YMgj3uZyWNfYhxwgzk6E2RiwLTh+GZAV15g9Wh2PBy0tZZ2NP4ODTzQqDDDvxf4lnOUNbiyD2z3Sqj7P0D/vDiab2hFUb5UkmKF+fdbq7oRHWgJrZmHpH0y6hmox9dA3rUKMr3Cka8e6UTpjte1DmBigpvDNdtIq83Vz+um6PDWL1mcjxf7a2FzqDPeEubH0AKnIx4INv4vTBn3FyicKa+ZnLTo6vQRGJbVmLWoYcPxnRu56XFL9pm7kzYdTP28S2AqMsTwH/xvDv5+Ju9cwbH6YMQTiK8qaYWh92ntmsQUWPH9Q62oZsCaTN8qWn6YD059ORXqwdWQdyyHTD7hptUxu8Dnx0oSdZUCrw9eaJP4TAm3QQ+3Q5qXhEsjX+DOlOw+AewEWY966Dz/bPYR4wZxzTn31nNI9JTYW/268ns6wbeAWNHEuGhzakqF6wxBoiXW05AvbIe8YwUja3Hss4nID7Ehx89DK4muMduK6x9uD+WmRhWE264meErao+kNYN+zCureFZC3LoB8bCNkPedtJcylBbpKmxhhtr1upso5QTvKqxn2fL8GVFf6Zl481wJGDNBNEAfdJOkCeBcD2PjBUGeOxNCspqjvIWHfj2tFnZAJYKf5NEm6ISTugmNlgOk8rehRcHLyR8i/LoK6byVub1+GhxNrsRTaHRnlc7LS3P8/0to3iu1IahQnSdqQBzKZevhjYPdyyFvmQ977EZSLO3mYKtMbVNyYoBOrh2dm4M29os8QnbKXIx5/EPSamNW9WnNAGdl2Pdx0hZwmJowZCJDtn/UOVj1UhmhJwrsDejoX543uoscdZENo3OkzMcA0BplMDvnE/Wshb50Pdc8K4OBHeK1NGppX5Zsz5E5N62Ra8fynWsvYoMHkySk5Nqp3GaOoSN2zEvLWhZC3LYJ85Eso5QdFBECTNgsTDOcsGFJxgFYG0N/q3TO4cekgOsbX468FWPFwK27T1anDob5nhKYme/8eOd03oU4fxhZ3K6IUNbomNcStK4dAmU730LGiIBjPFbS4aHcCb2gASTxp/qmfoOwU1kDd+wHUw2swolsBZXc1ei1ySWxwLyuO/6VWFO0/My+oKmfCu8SEI59A3fcB5O1LuAQoO5ZDOfmDGAhP4JnDu4qDrAx0t2vIIbOLOHv4F3RsWofVlCT2Ymp9bH6lDxzvDRGMmDGcqdPfZOq0EXBMHMQ2v/oIeyapDosi8BPq4/yRzWLBnVdzuEc3LoGo+HzjGqcA0dEwtxd2QN73CeRfF0DetgTqgdUc/Ld7FrO4KuK1/K3qhA614vcvaYU1/ZbmBnlqVP43uFMOcxDnD30MedtSnRELoOxZDeXsFr2O6ITL1jpVvyLw7kxxXWdEReVnd2PwQx1QX5K4X+gU688GZzVmo0tT2LjSJPZaekM8EOPHQ1eqmnijTxdcP79HRD1XzfuPrSBbn21hAPkG0mg9vFQOrYf860Ju7+XtS6Ee/gT2PR9gYPtMNKtC/5iimlYcEzjSitu/rFF5dXG0/8L8YE/SBO2JnKa4+MMcqMc/hbxjmejbFgvp2L8WyuW9gniTWaog6RU+m220AEFURl/Cli9XYlifrmjdqCZr4SfRS79ZE0+JJft5sLaNarLhj3dj2zasEitgd6mSw72OqSLIlQFv6jSjvX6UKce/ZfL2xSL42L4Eyo5lfLn23Lez8HhmY1pzEK/hjw0aYcXs39KKYwImFYR4aRTntq0TwrYsGcnUU+uh7lkFeTsxYqkuJUsgH/tGRBhG2GoySwbg7owxvjdLrb6Wi4vcod6+fBAnd3/P9v+0lu376VOc2v0d7l45KJYf2QW+tmyO3a1Mr+yz+RzPfZEGn/lZzH104LnU71kJ9fTn2DT/TbSODaSXdWhFYd5kdp6z4vRvbWV1g1+m18BT0i7ZJrHpL/UEO/Ax1CNrdG1YzgnmZmn3B5DP6rWXlSb2TAyx+g2L06au3joh9gIo56Eq58TnW/o/UjBFK4ZW3QtodyaTqRHl52TnFbLzBDxpNI2DpP7oWsj7PsSU5x7kqfOM6pJWEmG73r7RP5Bm+Fe2No2jWhVF2E7nBlThJqlvZhO2/5P3mHr6S6bu/YjRxIQzgpulhTxkUy5sF4ygNy+aAddj8orhqplBVmaYr6/YzWbN+RuTP3I6ZQN4CqkPfKrb+YUCeJL6fR9APbUOO1aMQu+UBoivImkFgVW1llG+W7qnNPrj7wH6d7R+OYnhJTV9PyIbmFhN0jIDPNnkZ7qym78uZ+rJLxh2rzT5h0VQqO9fA4U0gkDggz/+d82RO/jG54qgu4WNFa4XnTOG1rrp2cR0ChoonqeQmvyXATyZm5Ofo3zTQox9vB29A1pMsMK9tdaxgeOH/Sf9w9K2DcL7F4XbynMCqmhNJUnr2DACn4x+njGSnuOfArtWCCbsJNOka8TuVdxHKJd2CUdNDpvH2eS0XYAZoPGjoSVuEyMT6JX6GKNS7aTui45AJmkn/0TmkUyN4bMIeEqmnVyHOztXsCXD+rE2tYOogkLLq+GhFUfa9nVsHFtmHf9/ROuZ3jimpKbffHJK6TZJo+jgkeR6+GLiK2D7VvNB8bkDMWGnHjEZDo6yrcQM2p5EGyQ4QwgwKh/XnaK+Oncv2y4k+5jL1xi/JSZQGHluK+QjGyBTqKwLAadhx1IR2ZCwnPwMt39ditXvDGBd42ryiVWWr6QVhtvulsYEvfVGv7b3W8f9H9ceaBJTUBTl+11+iJeWfJ+kNfeUtF4p9fDhu8/gt61LaKWIqYc+gUKMMMwTB4QkcSFnjrLvYyhHvoR84ntuIijHrlzZx2j6L189qFcyuDZ00AZB+cp+yJf28GvJ6cvHv4V8cJ2QcjIrdO+tC6FsX8oUitR2kLSvYuqRtWRq2PmNszBvYC90bRzJ0wmZPhL/b3jFUb5LujSv29g6zv/4RuXuxZE+v9B/zku9X9JImtrVC2XvPdWJ7ftwPFMPfMQlTj34EdguMzOWOh23kynbFjN+npi2a6UAdfdqyHvo+AFkMnE7l9OMnBHA/Hdb54vOfy/MCwHPbTvN5E98hrvbVrBN895iw7sVs+JIH9acJN5HhJal0b6r/2X5nP/O1rFBZNeW0X4bC0Lv07J9JY0Gme4nsb5ZjRlJ3IGPxoLtXsUnN+rxz6Ae+BDYvQIKmSmDKSSxunPk2sLDQ/3IPxPAS8R1JkYyMi17V/IZO/kiCpNvbF6En+cNx7gnOqBr0yhGS4aJnmTjq2hFYbbbZTGBizo3rVuxfvN/euvcNCajNNp/ZkGY92X699+p3kIrqCruoRa1MerR1mz9hFcY5dPvbKOp/sdcSnk/ukaAeOBDYav3Ump8pTjS3/tX85U7LtmULOS/oaThalb+wzy2bclILBnah/2lXTrrUD+E1oi5IHD7Hnqf1jLKb2/rWkFDeibH1bbS/b+uPVtaGty+fvgjxZG+q+mdOsSMzOqSRnaX/AXVBnWh7ahlyWzCk+3ZihFPsK+nDMSOpSNxZO0EduaraezCNzNwaeN0XN44i53bMB3HP3sfe1eNwqY5w7Dmb8+wmS/3YMO7F7LHMxuxVrE1+P80TqgqaclekpbrL2n5IfeRYz3YKjZoQs/mdfM1TatqpfP/ROudlxfWvlFUt7a1aswsjrDtzg/xtucFenJTRTE3MYVSHi3uk7R0X8GcwnAbSmr6oizGj5VG+7GiSBvLD72PNEmjvViUHkjwkLQWnhKPxig0pvffFYR6X2xZ0/fL1nVCX+8YXztry5YtlVcp/19uvTKb1mnfMLJL69ohw4uj/D4oivTdURRhO58f6m3PC/LS8gKrajkB1D20LD9Jy/avwv9tOnWq5KAtrMXhtmslEdWPFEf6fl0SEzilVd2wp+klhM//XmXyn+3e7Y2ePX3JNnduEJ3Url5Iceu64e3Laod0zg+u1qkovHqnsjoRHUtjA1o+0Cgyjf5h2nNtC0P3rFjxx18P82f7s/3Z/mz/N9v/A2UbsqDH4E7FAAAAAElFTkSuQmCC) center/contain no-repeat;
@@ -146,7 +144,6 @@
   .navlinks a:hover{color:var(--amber2)}
   nav .btn{padding:10px 20px;font-size:14px}
 
-  /* ---------- hero ---------- */
   .hero{padding:86px 0 70px;overflow:hidden}
   .hero::before{
     content:"";position:absolute;inset:0;pointer-events:none;
@@ -170,7 +167,6 @@
   .stats b{display:block;font-size:26px;font-weight:800;letter-spacing:-.02em;color:#fff}
   .stats span{font-size:12.5px;color:var(--dim)}
 
-  /* ---------- app mockup ---------- */
   .shot{
     background:linear-gradient(180deg,#151c25,#0e1319);
     border:1px solid var(--line);border-radius:18px;overflow:hidden;
@@ -209,14 +205,12 @@
   .log b{color:var(--jade);font-weight:600}
   .log u{color:var(--amber2);text-decoration:none}
 
-  /* ---------- sections ---------- */
   .band{padding:92px 0;border-top:1px solid var(--line)}
   .band.alt{background:linear-gradient(180deg,var(--bg2),var(--bg))}
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
   .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 
-  /* feature groups */
   .fgroup{
     background:linear-gradient(180deg,var(--panel),#11161d);
     border:1px solid var(--line);border-radius:var(--radius);padding:26px;
@@ -232,7 +226,6 @@
   }
   .chip.hot{background:rgba(245,160,60,.1);border-color:rgba(245,160,60,.26);color:var(--amber2)}
 
-  /* keys */
   .keys{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
   .key{display:flex;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
   kbd{
@@ -242,7 +235,6 @@
   }
   .key span{font-size:13.5px;color:var(--muted)}
 
-  /* steps */
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;position:relative}
   .step{background:linear-gradient(180deg,var(--panel),#11161d);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
   .step b.n{
@@ -252,7 +244,6 @@
   }
   .step p{color:var(--muted);font-size:14.5px;margin-top:9px}
 
-  /* plans */
   .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;align-items:start}
   .plan{background:linear-gradient(180deg,var(--panel),#11161d);border:1px solid var(--line);border-radius:18px;padding:30px}
   .plan.best{border-color:rgba(245,160,60,.45);box-shadow:0 26px 60px -30px rgba(245,160,60,.4);position:relative}
@@ -269,7 +260,6 @@
   .plan li::before{content:"✓";color:var(--jade);font-weight:800;flex:none}
   .plan .btn{width:100%;justify-content:center}
 
-  /* faq */
   details{border:1px solid var(--line);border-radius:12px;background:var(--panel);margin-top:12px;overflow:hidden}
   details[open]{border-color:#36465a}
   summary{
@@ -282,7 +272,6 @@
   details p{padding:0 22px 20px;color:var(--muted);font-size:14.5px;max-width:86ch}
   .faq{max-width:860px;margin:44px auto 0}
 
-  /* cta band */
   .final{
     margin:0 auto;max-width:var(--max);
     background:
@@ -291,7 +280,6 @@
     border:1px solid rgba(245,160,60,.26);border-radius:24px;padding:62px 48px;text-align:center;
   }
 
-  /* notice + footer */
   .notice{
     display:flex;gap:16px;align-items:flex-start;margin-top:52px;
     background:rgba(228,101,43,.07);border:1px solid rgba(228,101,43,.28);
@@ -321,6 +309,76 @@
     .band{padding:68px 0}
     .final{padding:44px 24px;border-radius:18px}
   }
+
+  .plat{position:relative;overflow:hidden}
+  .plat .tag{
+    display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+    padding:4px 10px;border-radius:999px;margin-bottom:14px;
+    background:rgba(63,208,166,.1);border:1px solid rgba(63,208,166,.28);color:var(--jade);
+  }
+  .plat .tag.new{background:linear-gradient(135deg,var(--amber),var(--ember));color:#160e04;border-color:transparent}
+  .plat ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px}
+  .plat li{font-size:14px;color:var(--muted);display:flex;gap:10px}
+  .plat li::before{content:"✓";color:var(--jade);font-weight:800;flex:none}
+  .games{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:40px}
+  .game{
+    display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:14px;
+    background:var(--panel);border:1px solid var(--line);font-weight:700;font-size:15px;
+  }
+  .game i{font-style:normal;font-size:18px}
+
+  .v2{
+    background:
+      radial-gradient(700px 380px at 85% 10%,rgba(245,160,60,.14),transparent 65%),
+      radial-gradient(600px 380px at 0% 90%,rgba(63,208,166,.08),transparent 65%),
+      var(--bg);
+  }
+  .bignum{font-size:clamp(64px,9vw,112px);font-weight:800;line-height:1;letter-spacing:-.05em}
+  .bignum small{font-size:.32em;letter-spacing:-.01em;color:var(--muted);font-weight:700;margin-left:8px}
+  .v2feat{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+  .v2feat div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .v2feat b{display:block;font-size:15px;margin-bottom:4px}
+  .v2feat span{font-size:13.5px;color:var(--muted)}
+  .cmp{width:100%;border-collapse:collapse;margin-top:48px;font-size:14.5px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .cmp th,.cmp td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--line)}
+  .cmp tr:last-child td{border-bottom:0}
+  .cmp th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);background:#10151c}
+  .cmp td:first-child{color:var(--muted);font-weight:600}
+  .cmp td.hi{color:var(--amber2);font-weight:700}
+  .cmp-wrap{overflow-x:auto}
+
+  .vers{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:48px}
+  .ver{background:linear-gradient(180deg,var(--panel),#11161d);border:1px solid var(--line);border-radius:20px;padding:30px}
+  .ver.hot{border-color:rgba(245,160,60,.45);box-shadow:0 26px 60px -30px rgba(245,160,60,.4)}
+  .ver .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:14px;background:rgba(63,208,166,.1);border:1px solid rgba(63,208,166,.28);color:var(--jade)}
+  .ver .tag.new{background:linear-gradient(135deg,var(--amber),var(--ember));color:#160e04;border-color:transparent}
+  .ver h3{font-size:22px}
+  .ver .bignum{font-size:clamp(52px,6vw,80px);margin-top:14px}
+  .ver > p{color:var(--muted);font-size:15px;margin-top:12px}
+
+  .zalo{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;text-align:left;max-width:860px;margin:36px auto 0}
+  .qrbox{background:#fff;border-radius:18px;padding:14px;width:220px;box-shadow:0 26px 60px -24px rgba(245,160,60,.45)}
+  .qr{display:block;width:100%;height:auto}
+  .qrbox p{color:#334;font-size:12px;font-weight:700;text-align:center;margin-top:8px}
+  .btn-zalo{background:#0068ff;color:#fff;box-shadow:0 12px 32px -12px rgba(0,104,255,.8)}
+  .btn-zalo:hover{transform:translateY(-2px);background:#1a78ff}
+  .zalo ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin:16px 0 24px}
+  .zalo li{color:var(--muted);font-size:14.5px;display:flex;gap:10px}
+  .zalo li::before{content:"✓";color:var(--jade);font-weight:800}
+
+
+  @media(max-width:980px){
+    .vers{grid-template-columns:1fr}
+    .v2feat{grid-template-columns:1fr}
+  }
+  @media(max-width:620px){
+    .wrap{padding:0 16px}
+    .zalo{grid-template-columns:1fr;justify-items:center;text-align:center;gap:26px}
+    .zalo ul{align-items:center}
+    .stats{gap:22px}
+    .cta .btn{width:100%;justify-content:center}
+    nav .btn{padding:9px 14px;font-size:13px}
+  }
 </style>
 </head>
 <body>
@@ -332,87 +390,84 @@
       Shiba<span style="color:var(--amber)">Auto</span>
     </a>
     <div class="navlinks">
+      <a href="#phienban">Phiên bản</a>
+      <a href="#nentang">Nền tảng</a>
       <a href="#tinhnang">Tính năng</a>
-      <a href="#bangdieukhien">Bảng điều khiển</a>
-      <a href="#batdau">Bắt đầu</a>
       <a href="#banquyen">Bản quyền</a>
       <a href="#faq">Hỏi đáp</a>
+      <a href="#lienhe">Liên hệ</a>
     </div>
-    <!-- TODO:DOWNLOAD -->
-    <a class="btn btn-primary" href="#batdau">Tải Shiba Auto</a>
+    <a class="btn btn-primary" href="https://zalo.me/g/cuyyjpst6ssfei4cwmlu" target="_blank" rel="noopener">Tải Shiba Auto</a>
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
+<main>
 <section class="hero">
   <div class="wrap">
     <div>
-      <!-- TODO:VERSION — thay "Phiên bản mới nhất" bằng số thật, vd "Phiên bản 1.4.2" -->
-      <div class="pill"><span class="dot"></span> Phiên bản mới nhất · Võ Lâm Chi Mộng bản web (H5)</div>
-      <h1>Bớt thao tác tay.<br><span class="grad">Nhiều tài khoản, một bảng điều khiển.</span></h1>
+      <div class="pill"><span class="dot"></span> Shiba Auto V1 &amp; V2 · Client &amp; Web H5</div>
+      <h1>Auto VLCM treo cả dàn.<br><span class="grad">Trăm tài khoản, một cú bấm.</span></h1>
       <p class="lead">
-        Shiba Auto mở mỗi tài khoản trong một cửa sổ game thật trên máy bạn, rồi tự lo phần việc lặp lại:
-        luyện công, phó bản, vận tiêu, săn BOSS, nhiệm vụ ngày và tuần. Bạn chỉ cần tích tài khoản và bấm Mở.
+        Shiba Auto lo trọn phần cày cuốc của Võ Lâm Chi Mộng và các game nền tảng VLCM — luyện công, phó bản,
+        vận tiêu, săn BOSS, nhiệm vụ ngày/tuần — trên cả bản <b style="color:#fff">Client</b> lẫn <b style="color:#fff">Web H5</b>.
+        Hai phiên bản cho mọi nhu cầu: <b style="color:var(--amber2)">V1</b> ứng dụng Windows trực quan, <b style="color:var(--amber2)">V2</b> treo cả dàn trên Windows, Linux, VPS và điều khiển từ xa ngay trên điện thoại.
       </p>
       <div class="cta">
-        <!-- TODO:DOWNLOAD -->
-        <a class="btn btn-primary" href="#batdau">Tải bản mới nhất</a>
-        <a class="btn btn-ghost" href="#tinhnang">Xem danh sách tính năng</a>
+        <a class="btn btn-primary" href="https://zalo.me/g/cuyyjpst6ssfei4cwmlu" target="_blank" rel="noopener">Tải Shiba Auto</a>
+        <a class="btn btn-ghost" href="#phienban">So sánh V1 &amp; V2</a>
       </div>
-      <p class="finep">Windows Server 2012 → Windows 11, chạy được cả trên VPS · không cần giả lập · tải về là dùng được ngay</p>
+      <p class="finep">Client PC · Web H5 · Windows / Linux / VPS · không cần giả lập · dùng thử miễn phí</p>
 
       <div class="stats">
-        <div><b>18</b><span>nhóm tác vụ tự động</span></div>
-        <div><b>25–30</b><span>tài khoản treo trên máy 16 GB</span></div>
-        <div><b>190+</b><span>tuỳ chọn cài đặt riêng/TK</span></div>
-        <div><b>9</b><span>phím tắt trong game</span></div>
+        <div><b>100+</b><span>tài khoản / VPS (V2)</span></div>
+        <div><b>2</b><span>nền tảng Client &amp; H5</span></div>
+        <div><b>18</b><span>nhóm tác vụ</span></div>
+        <div><b>24/7</b><span>treo máy</span></div>
       </div>
     </div>
 
-    <!-- app mockup -->
     <div class="shot">
       <div class="shot-bar">
         <span class="tl" style="background:#ff5f57"></span>
         <span class="tl" style="background:#febc2e"></span>
         <span class="tl" style="background:#28c840"></span>
         <span class="shot-title">Shiba Auto — Bảng điều khiển</span>
-        <span class="lic">Bản quyền</span>
+        <span class="lic">128 TK online</span>
       </div>
       <div class="shot-body">
         <div class="acc-list">
           <div class="acc-tools">
-            <span class="mini on">▶ Mở</span>
-            <span class="mini">■ Đóng</span>
+            <span class="mini on">▶ Mở tất cả</span>
             <span class="mini">⇄ Đồng bộ</span>
-            <span class="mini">＋</span>
+            <span class="mini">＋ Nhập</span>
             <span class="mini">⋯</span>
           </div>
-          <div class="row sel"><span class="cb ck"></span><span class="nm">ThiếuLâm_01</span><span class="st">Train · Lv 92</span></div>
-          <div class="row"><span class="cb ck"></span><span class="nm">NgaMy_02</span><span class="st">Phó bản</span></div>
-          <div class="row"><span class="cb ck"></span><span class="nm">CaiBang_03</span><span class="st">Vận tiêu</span></div>
-          <div class="row"><span class="cb ck"></span><span class="nm">VoDang_04</span><span class="st pk">Auto PK</span></div>
-          <div class="row"><span class="cb"></span><span class="nm">ThienVuong_05</span><span class="st idle">Treo máy</span></div>
-          <div class="row"><span class="cb ck"></span><span class="nm">DuongMon_06</span><span class="st">Săn BOSS</span></div>
-          <div class="row"><span class="cb"></span><span class="nm">CuMong_07</span><span class="st idle">Chưa mở</span></div>
+          <div class="row sel"><span class="cb ck"></span><span class="nm">ThiếuLâm_001</span><span class="st">Train · Lv 92</span></div>
+          <div class="row"><span class="cb ck"></span><span class="nm">NgaMy_014</span><span class="st">Phó bản</span></div>
+          <div class="row"><span class="cb ck"></span><span class="nm">CaiBang_027</span><span class="st">Vận tiêu</span></div>
+          <div class="row"><span class="cb ck"></span><span class="nm">VoDang_042</span><span class="st pk">Auto PK</span></div>
+          <div class="row"><span class="cb ck"></span><span class="nm">DuongMon_063</span><span class="st">Săn BOSS</span></div>
+          <div class="row"><span class="cb ck"></span><span class="nm">ThienVuong_088</span><span class="st">NV Ngày</span></div>
+          <div class="row"><span class="cb ck"></span><span class="nm">CuMong_128</span><span class="st">Liên Đấu</span></div>
         </div>
         <div class="panel-right">
           <div class="tabs">
             <span class="tab on">Train</span><span class="tab">Auto PK</span><span class="tab">Phó bản</span>
-            <span class="tab">Vận tiêu</span><span class="tab">Tiện ích</span><span class="tab">PK &amp; Nhặt</span>
+            <span class="tab">Vận tiêu</span><span class="tab">Tiện ích</span>
           </div>
           <div class="q">
             <div class="q-h">Hàng đợi công việc</div>
             <div class="q-i run"><i></i>Luyện công — Bãi 2/4<em>đang chạy</em></div>
             <div class="q-i"><i></i>Phó bản · Liên Trảm<em>chờ 12′</em></div>
-            <div class="q-i"><i></i>NV Ngày<em>trong đợi</em></div>
-            <div class="q-i"><i></i>Bắt ngựa<em>trong đợi</em></div>
-            <div class="q-i"><i></i>Giao dịch → TK chính<em>22:00</em></div>
+            <div class="q-i"><i></i>NV Ngày / Tuần<em>trong đợi</em></div>
+            <div class="q-i"><i></i>Săn BOSS theo giờ<em>21:30</em></div>
+            <div class="q-i"><i></i>Gom đồ → TK chính<em>22:00</em></div>
           </div>
           <div class="log">
             [21:04] <b>✓</b> Hết quái, sang bãi <u>Tương Dương #3</u><br>
-            [21:06] <b>✓</b> Nhặt: Thiên Thạch ×4, huỷ đồ xám<br>
-            [21:09] <b>!</b> Độ bền 0 → về NPC sửa đồ<br>
-            [21:12] <b>✓</b> Sửa xong, quay lại bãi train<br>
+            [21:06] <b>✓</b> Nhặt: Thiên Thạch ×4<br>
+            [21:09] <b>✓</b> Tự sửa đồ, quay lại bãi<br>
+            [21:12] <b>✓</b> Hạ BOSS <u>Độc Cô Kiếm</u><br>
             [21:15] <b>✓</b> Túi Phúc + Giftcode đã nhận
           </div>
         </div>
@@ -421,50 +476,157 @@
   </div>
 </section>
 
-<!-- ================= VALUE ================= -->
+<section class="band alt" id="nentang">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow ctr">Một auto · mọi nền tảng</div>
+      <h2>Client hay Web H5,<br><span class="grad">Shiba Auto đều cân hết</span></h2>
+      <p class="lead">Bạn chơi bản nào cũng dùng chung một bộ tính năng, một cách cài đặt. Không cần giả lập, không cần máy khủng.</p>
+    </div>
+    <div class="grid3">
+      <div class="card plat">
+        <span class="tag">Client PC</span>
+        <div class="ico">🖥️</div>
+        <h3>Bản Client</h3>
+        <p>Dành cho người quen chơi bằng client trên máy tính. Mở nhiều tài khoản cùng lúc, mỗi tài khoản một cửa sổ, quản lý tập trung.</p>
+        <ul>
+          <li>Đủ bộ train, phó bản, vận tiêu, BOSS</li>
+          <li>Proxy riêng cho từng tài khoản</li>
+          <li>Tự cập nhật khi game ra bản mới</li>
+        </ul>
+      </div>
+      <div class="card plat">
+        <span class="tag">Web H5</span>
+        <div class="ico">🌐</div>
+        <h3>Bản Web H5 — tối ưu riêng</h3>
+        <p>Viết riêng cho bản web: nhẹ, nhanh, đăng nhập một chạm và treo được nhiều tài khoản hơn trên cùng một máy.</p>
+        <ul>
+          <li>Đồ hoạ thấp, ẩn quái &amp; hiệu ứng cho nhẹ máy</li>
+          <li>F5 đăng nhập lại tức thì, không tải lại trang</li>
+          <li>Mở hàng loạt ở chế độ ẩn cửa sổ</li>
+        </ul>
+      </div>
+      <div class="card plat">
+        <span class="tag new">V1 &amp; V2</span>
+        <div class="ico">🚀</div>
+        <h3>Chạy ở đâu cũng được</h3>
+        <p>Máy nhà, VPS Windows hay VPS Linux — chọn phiên bản hợp với dàn của bạn.</p>
+        <ul>
+          <li>V1: ứng dụng Windows, 25–30 TK / máy 16 GB</li>
+          <li>V2: Windows &amp; Linux, 100+ TK / VPS</li>
+          <li>V2: điều khiển từ xa trên điện thoại</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="center" style="margin-top:64px">
+      <div class="eyebrow ctr">Game được hỗ trợ</div>
+      <h3 style="font-size:24px">Hỗ trợ các game nền tảng VLCM</h3>
+    </div>
+    <div class="games">
+      <div class="game"><i>⚔️</i>Võ Lâm Chi Mộng</div>
+      <div class="game"><i>🐉</i>Võ Lâm Chân Mệnh</div>
+      <div class="game"><i>👑</i>Mộng Chí Tôn</div>
+      <div class="game"><i>🗡️</i>Mộng Kiếm Hiệp</div>
+    </div>
+    <p class="finep center">Cùng nền tảng VLCM nên dùng chung một bản auto — cả Client lẫn Web H5.</p>
+  </div>
+</section>
+
+<section class="band v2" id="phienban">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow ctr">Phiên bản</div>
+      <h2>Shiba Auto <span class="grad">V1 &amp; V2</span></h2>
+      <p class="lead">Hai phiên bản, chung một bộ tính năng. Chơi vài tài khoản trên máy nhà thì V1 là đủ; treo cả dàn trên VPS thì lên V2.</p>
+    </div>
+
+    <div class="vers">
+      <div class="ver">
+        <span class="tag">Shiba Auto V1</span>
+        <h3>Ứng dụng Windows trực quan</h3>
+        <div class="bignum grad">30<small>tài khoản / máy 16 GB</small></div>
+        <p>Bản quen thuộc cho người chơi trên máy tính: mỗi tài khoản một cửa sổ game, nhìn tận mắt nhân vật đang làm gì, điều khiển bằng phím tắt ngay trong game.</p>
+        <div class="v2feat">
+          <div><b>🪟 Windows &amp; VPS Windows</b><span>Windows Server 2012 đến Windows 11.</span></div>
+          <div><b>🎮 Xem trực tiếp</b><span>Mỗi tài khoản một cửa sổ, ẩn / hiện tuỳ ý.</span></div>
+          <div><b>⌨️ Phím tắt F1–F8</b><span>Bật hàng đợi, treo máy, Auto PK ngay trong game.</span></div>
+          <div><b>🔄 Tự cập nhật</b><span>Mở app là kiểm bản mới, giữ nguyên dữ liệu.</span></div>
+        </div>
+      </div>
+
+      <div class="ver hot">
+        <span class="tag new">Shiba Auto V2 · Mới</span>
+        <h3>Sinh ra để chạy cả dàn</h3>
+        <div class="bignum grad">100+<small>tài khoản / VPS</small></div>
+        <p>Làm lại từ đầu cho người treo số lượng lớn: mỗi tài khoản nhẹ hơn, chạy ngầm không cần cửa sổ, một VPS gánh cả bang hội, theo dõi dàn ngay trên điện thoại.</p>
+        <div class="v2feat">
+          <div><b>🐧 Windows &amp; Linux</b><span>Máy nhà, VPS Windows hay VPS Linux (Ubuntu) giá rẻ.</span></div>
+          <div><b>📱 Điều khiển từ xa</b><span>Dashboard mở trên điện thoại, có mật khẩu bảo vệ.</span></div>
+          <div><b>🌙 Treo 24/7</b><span>Chạy ngầm hoàn toàn, tắt màn hình vẫn cày đều.</span></div>
+          <div><b>⚡ Tải về là chạy</b><span>Trình duyệt đi kèm sẵn, tự cập nhật định kỳ.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap cmp-wrap">
+    <table class="cmp">
+      <thead><tr><th></th><th>Shiba Auto V1</th><th style="color:var(--amber2)">Shiba Auto V2</th></tr></thead>
+      <tbody>
+        <tr><td>Phù hợp</td><td>Vài đến vài chục tài khoản</td><td class="hi">Cả dàn, hàng trăm tài khoản</td></tr>
+        <tr><td>Hệ điều hành</td><td>Windows</td><td class="hi">Windows + Linux (Ubuntu)</td></tr>
+        <tr><td>Số tài khoản</td><td>25–30 TK trên máy 16 GB</td><td class="hi">100+ TK trên một VPS</td></tr>
+        <tr><td>Giao diện</td><td>Ứng dụng, mỗi TK một cửa sổ</td><td class="hi">Dashboard web, mở ở mọi nơi</td></tr>
+        <tr><td>Chạy nền</td><td>Ẩn cửa sổ game</td><td class="hi">Chạy ngầm 24/7</td></tr>
+        <tr><td>Tính năng auto</td><td>Đầy đủ 18 nhóm tác vụ</td><td class="hi">Đầy đủ 18 nhóm tác vụ</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
 <section class="band alt">
   <div class="wrap">
     <div class="center">
       <div class="eyebrow ctr">Vì sao chọn Shiba Auto</div>
-      <h2>Chạy trên game thật,<br>không phải giả lập</h2>
-      <p class="lead">Mỗi tài khoản là một phiên game web đang chạy thật trong ứng dụng. Không cần LDPlayer, không cần cài thêm trình duyệt, không phụ thuộc vào việc nhận diện hình ảnh trên màn hình.</p>
+      <h2>Cày nhàn, treo bền,<br>không cần giả lập</h2>
+      <p class="lead">Mỗi tài khoản là một phiên game thật. Không LDPlayer, không nhận diện hình ảnh chập chờn, không phải ngồi canh.</p>
     </div>
     <div class="grid4">
       <div class="card">
         <div class="ico">🪟</div>
         <h3>Không cần giả lập</h3>
-        <p>Dùng WebView2 có sẵn trên Windows. Tải về, giải nén, chạy một file exe là xong — máy nhà hay VPS đều được.</p>
+        <p>Tải về, giải nén, mở là chạy — máy nhà hay VPS đều được.</p>
       </div>
       <div class="card">
         <div class="ico">⚡</div>
-        <h3>Máy vẫn mượt</h3>
-        <p>Cửa sổ game chia theo tiến trình riêng (~4 tài khoản/tiến trình) nên bảng điều khiển không bị treo theo. Có chế độ đồ hoạ thấp và ẩn hiệu ứng.</p>
+        <h3>Nhẹ máy, treo bền</h3>
+        <p>Đồ hoạ thấp, ẩn quái và hiệu ứng: treo hàng chục tài khoản mà máy vẫn mượt.</p>
       </div>
       <div class="card">
         <div class="ico">⇄</div>
-        <h3>Đồng bộ một lần</h3>
-        <p>Cài xong một tài khoản thì chép cấu hình sang các tài khoản còn lại — tất cả hoặc chỉ riêng toạ độ train, phó bản, nhặt đồ.</p>
+        <h3>Cài một, áp dụng tất cả</h3>
+        <p>Cài xong một tài khoản thì Đồng bộ sang cả dàn — toàn bộ hoặc chỉ toạ độ train, phó bản, nhặt đồ.</p>
       </div>
       <div class="card">
         <div class="ico">🛡️</div>
-        <h3>Thao tác đúng cách</h3>
-        <p>Bot đọc trạng thái game và bấm như người chơi. Không bấm "Dùng TPoint đến", nên không tốn TPoint của bạn.</p>
+        <h3>Không tiêu TPoint</h3>
+        <p>Thao tác như người chơi thật, không bao giờ tự ý dùng TPoint hay vật phẩm của bạn.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= FEATURES ================= -->
 <section class="band" id="tinhnang">
   <div class="wrap">
     <div class="eyebrow">Bộ tính năng</div>
     <h2>Mọi việc lặp lại trong ngày,<br>gom vào một hàng đợi</h2>
-    <p class="lead" style="margin-top:18px">Mỗi nhóm có bảng cài đặt riêng cho từng tài khoản. Bật cái nào thì bot xếp vào hàng đợi và làm lần lượt, xong thì quay về bãi train.</p>
+    <p class="lead" style="margin-top:18px">Bật việc nào thì auto làm việc đó, lần lượt từng việc, xong lại quay về bãi train. Mỗi tài khoản một bộ cài đặt riêng.</p>
 
     <div class="grid3">
       <div class="fgroup">
         <div class="fgroup-h"><div class="ico">⚔️</div><h3>Luyện công</h3><span class="no">01</span></div>
-        <p>Danh sách bãi train lưu bằng F4, chạy theo phạm vi, hết quái thì tự sang bãi kế. Bãi ở map khác thì tự đi tới.</p>
+        <p>Lưu nhiều bãi train bằng F4, hết quái tự sang bãi kế, bãi ở map khác thì tự đi tới.</p>
         <div class="chips">
           <span class="chip hot">Nhiều bãi train</span><span class="chip">Phạm vi đánh</span>
           <span class="chip">Tự chuyển bãi</span><span class="chip">Ẩn quái / hiệu ứng</span><span class="chip">Skill thú</span>
@@ -482,16 +644,16 @@
 
       <div class="fgroup">
         <div class="fgroup-h"><div class="ico">🏯</div><h3>Phó bản &amp; chiến trường</h3><span class="no">03</span></div>
-        <p>Chọn phó bản cần đi, chờ đủ Liên Trảm nếu cần, tự vào — đánh — ra. Gồm cả các trận theo giờ.</p>
+        <p>Chọn phó bản cần đi, tự vào — đánh — ra. Trận theo đội thì đội trưởng tự mời cả nhóm.</p>
         <div class="chips">
-          <span class="chip hot">Phó bản</span><span class="chip">Liên Đấu</span><span class="chip">Phu Tử Trận</span>
+          <span class="chip hot">Phó bản</span><span class="chip">Liên Đấu 3v3</span><span class="chip">Phu Tử Trận</span>
           <span class="chip">Lưỡng Nghi Trận</span><span class="chip">Vạn Thú Trận</span>
         </div>
       </div>
 
       <div class="fgroup">
         <div class="fgroup-h"><div class="ico">🐉</div><h3>Săn BOSS</h3><span class="no">04</span></div>
-        <p>Tick boss cần săn, kéo để sắp thứ tự ưu tiên. Săn theo giờ boss hoặc săn ngay lập tức.</p>
+        <p>Tick boss cần săn, kéo để sắp thứ tự ưu tiên. Săn đúng giờ boss ra hoặc săn ngay.</p>
         <div class="chips">
           <span class="chip hot">Theo giờ boss</span><span class="chip">Thứ tự ưu tiên</span><span class="chip">Săn ngay</span>
         </div>
@@ -507,7 +669,7 @@
 
       <div class="fgroup">
         <div class="fgroup-h"><div class="ico">📜</div><h3>Nhiệm vụ</h3><span class="no">06</span></div>
-        <p>Nhiệm vụ ngày, nhiệm vụ tuần, chính tuyến và phụ tuyến chạy tuần tự trong hàng đợi.</p>
+        <p>Nhiệm vụ ngày, tuần, chính tuyến, phụ tuyến chạy tuần tự trong hàng đợi.</p>
         <div class="chips">
           <span class="chip hot">NV Ngày</span><span class="chip">NV Tuần</span>
           <span class="chip">Chính tuyến</span><span class="chip">Phụ tuyến</span><span class="chip">Thích Khách</span>
@@ -516,7 +678,7 @@
 
       <div class="fgroup">
         <div class="fgroup-h"><div class="ico">🎒</div><h3>Nhặt đồ &amp; dọn túi</h3><span class="no">07</span></div>
-        <p>Lọc đúng món cần nhặt, tự huỷ đồ rác, và PK ngược khi bị đánh lúc đang train.</p>
+        <p>Chỉ nhặt đúng món cần, tự huỷ đồ rác, bị đánh lúc train thì PK lại.</p>
         <div class="chips">
           <span class="chip hot">Lọc đồ nhặt</span><span class="chip">Huỷ đồ rác</span><span class="chip">PK khi train</span>
         </div>
@@ -524,7 +686,7 @@
 
       <div class="fgroup">
         <div class="fgroup-h"><div class="ico">🔁</div><h3>Giao dịch &amp; gom đồ</h3><span class="no">08</span></div>
-        <p>Dồn vật phẩm từ nhiều tài khoản phụ về một tài khoản chính. Các bot được điều phối từ bảng điều khiển nên không đánh nhau về lượt.</p>
+        <p>Dồn vật phẩm từ cả dàn tài khoản phụ về một tài khoản chính, hoàn toàn tự động.</p>
         <div class="chips">
           <span class="chip hot">Gom về 1 TK</span><span class="chip">Bán đồ cổ</span><span class="chip">Bắt ngựa</span><span class="chip">Ăn cưới</span>
         </div>
@@ -532,33 +694,32 @@
 
       <div class="fgroup">
         <div class="fgroup-h"><div class="ico">🧰</div><h3>Tiện ích &amp; tiếp tế</h3><span class="no">09</span></div>
-        <p>Hết thuốc thì về NPC mua đủ số lượng bạn khai báo, đồ hỏng độ bền 0 thì về Tương Dương sửa rồi quay lại bãi.</p>
+        <p>Hết thuốc tự về mua, hỏng đồ tự về sửa rồi quay lại bãi. Quà, Túi Phúc, Giftcode nhận hết.</p>
         <div class="chips">
           <span class="chip hot">Tự sửa đồ</span><span class="chip">Tự mua thuốc</span>
-          <span class="chip">Nhận quà</span><span class="chip">Túi Phúc</span><span class="chip">Giftcode</span>
+          <span class="chip">Nhận quà</span><span class="chip">Túi Phúc</span><span class="chip">Giftcode hàng loạt</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= DASHBOARD ================= -->
 <section class="band alt" id="bangdieukhien">
   <div class="wrap grid2">
     <div>
       <div class="eyebrow">Bảng điều khiển</div>
       <h2>Quản lý cả dàn tài khoản<br>mà không rối</h2>
       <p class="lead" style="margin-top:18px">
-        Tích nhiều dòng để mở, đóng hoặc đồng bộ hàng loạt. Bấm vào một dòng là thấy log và điều khiển riêng
-        tài khoản đó. Nhấp đúp để đưa cửa sổ game lên, kéo thả để sắp xếp thứ tự.
+        Tích nhiều dòng để mở, đóng, đồng bộ hàng loạt. Bấm một dòng là thấy log và điều khiển riêng tài khoản đó.
+        Kéo thả để sắp xếp, chia nhóm để đi phó bản theo đội.
       </p>
       <div class="grid3" style="grid-template-columns:1fr 1fr;gap:14px;margin-top:34px">
         <div class="card" style="padding:18px"><h3 style="font-size:15px">Proxy riêng từng TK</h3><p style="font-size:13.5px">Gán proxy theo tài khoản, kiểm tra ngay trong app.</p></div>
-        <div class="card" style="padding:18px"><h3 style="font-size:15px">Nhập / xuất danh sách</h3><p style="font-size:13.5px">Thêm hàng loạt tài khoản, mang cấu hình sang máy khác.</p></div>
+        <div class="card" style="padding:18px"><h3 style="font-size:15px">Nhập hàng loạt</h3><p style="font-size:13.5px">Thêm cả trăm tài khoản một lần, mang cấu hình sang máy khác.</p></div>
+        <div class="card" style="padding:18px"><h3 style="font-size:15px">Nhóm đội tự động</h3><p style="font-size:13.5px">Xếp đội trưởng và thành viên, vào trận theo đội không cần mời tay.</p></div>
+        <div class="card" style="padding:18px"><h3 style="font-size:15px">Giftcode hàng loạt</h3><p style="font-size:13.5px">Nhập một code, cả dàn cùng nhận.</p></div>
         <div class="card" style="padding:18px"><h3 style="font-size:15px">Sao lưu &amp; khôi phục</h3><p style="font-size:13.5px">Một cú bấm để quay về bộ cài đặt đang chạy tốt.</p></div>
-        <div class="card" style="padding:18px"><h3 style="font-size:15px">Chế độ thu gọn</h3><p style="font-size:13.5px">Ẩn cửa sổ game, chỉ còn bảng trạng thái nhỏ gọn.</p></div>
-        <div class="card" style="padding:18px"><h3 style="font-size:15px">Mật khẩu mã hoá</h3><p style="font-size:13.5px">Lưu theo máy và theo người dùng Windows của bạn.</p></div>
-        <div class="card" style="padding:18px"><h3 style="font-size:15px">Tự cập nhật</h3><p style="font-size:13.5px">Mở app là kiểm bản mới; chỉ thay exe, giữ nguyên dữ liệu.</p></div>
+        <div class="card" style="padding:18px"><h3 style="font-size:15px">Bảo mật tài khoản</h3><p style="font-size:13.5px">Mật khẩu được mã hoá, chỉ dùng được trên máy của bạn.</p></div>
       </div>
     </div>
 
@@ -568,7 +729,7 @@
           <span class="tl" style="background:#ff5f57"></span>
           <span class="tl" style="background:#febc2e"></span>
           <span class="tl" style="background:#28c840"></span>
-          <span class="shot-title">Cài đặt — ThiếuLâm_01</span>
+          <span class="shot-title">Cài đặt — ThiếuLâm_001</span>
         </div>
         <div style="padding:18px">
           <div class="tabs" style="margin-bottom:16px">
@@ -585,7 +746,7 @@
             <div class="q-h">Tuỳ chọn</div>
             <div class="q-i"><i style="background:var(--jade);box-shadow:0 0 8px var(--jade)"></i>Hết quái → sang bãi kế<em>bật</em></div>
             <div class="q-i"><i style="background:var(--jade);box-shadow:0 0 8px var(--jade)"></i>Ẩn quái &amp; hiệu ứng<em>bật</em></div>
-            <div class="q-i"><i style="background:var(--jade);box-shadow:0 0 8px var(--jade)"></i>Skill thú mỗi 5 giây<em>bật</em></div>
+            <div class="q-i"><i style="background:var(--jade);box-shadow:0 0 8px var(--jade)"></i>Skill thú tự động<em>bật</em></div>
             <div class="q-i"><i></i>Đồ hoạ thấp<em>tắt</em></div>
           </div>
         </div>
@@ -594,76 +755,74 @@
   </div>
 </section>
 
-<!-- ================= HOTKEYS ================= -->
 <section class="band">
   <div class="wrap">
     <div class="center">
       <div class="eyebrow ctr">Phím tắt</div>
       <h2>Điều khiển ngay trong cửa sổ game</h2>
-      <p class="lead">Không cần quay lại bảng điều khiển. Riêng F2 bấm được ở cả danh sách, áp dụng cho mọi tài khoản đang tích.</p>
+      <p class="lead">Không cần quay lại bảng điều khiển. F2 bấm được cả ở danh sách, áp dụng cho mọi tài khoản đang tích.</p>
     </div>
     <div class="keys">
       <div class="key"><kbd>F1</kbd><span>Bật / tắt hàng đợi công việc</span></div>
       <div class="key"><kbd>F2</kbd><span>Bật / tắt Treo máy</span></div>
       <div class="key"><kbd>F4</kbd><span>Lưu chỗ đang đứng làm bãi train</span></div>
-      <div class="key"><kbd>F5</kbd><span>Đăng nhập lại, không tải lại trang</span></div>
+      <div class="key"><kbd>F5</kbd><span>Đăng nhập lại tức thì</span></div>
       <div class="key"><kbd>F6</kbd><span>Bật / tắt Auto PK</span></div>
       <div class="key"><kbd>F7</kbd><span>Auto PK: đổi Người ↔ Quái</span></div>
       <div class="key"><kbd>F8</kbd><span>Auto PK: bật / tắt tự nhảy</span></div>
-      <div class="key"><kbd>Ctrl+1</kbd><span>Skill thú (bot tự bấm khi train)</span></div>
+      <div class="key"><kbd>Ctrl+1</kbd><span>Skill thú</span></div>
       <div class="key"><kbd>⋯</kbd><span>Tích tất cả, ẩn cửa sổ, proxy, cài đặt</span></div>
     </div>
   </div>
 </section>
 
-<!-- ================= STEPS ================= -->
 <section class="band alt" id="batdau">
   <div class="wrap">
     <div class="center">
       <div class="eyebrow ctr">Bắt đầu</div>
       <h2>Ba bước là chạy được</h2>
-      <p class="lead">Không cần cài đặt phức tạp, không cần giả lập. Giải nén và mở file exe.</p>
+      <p class="lead">Không cài đặt phức tạp, không giả lập. Giải nén và mở.</p>
     </div>
     <div class="steps">
       <div class="step">
         <b class="n">01</b>
         <h3>Tải &amp; giải nén</h3>
-        <p>Tải gói ZIP, giải nén ra thư mục bạn có quyền ghi (ví dụ Desktop). Giữ nguyên thư mục <code>lib\</code> đi kèm.</p>
+        <p>Vào nhóm Zalo nhận gói ZIP (V1 hoặc V2), giải nén ra thư mục bất kỳ, ví dụ Desktop hoặc ổ D.</p>
       </div>
       <div class="step">
         <b class="n">02</b>
-        <h3>Thêm tài khoản</h3>
-        <p>Mở app, bấm <b style="color:var(--amber2)">＋</b> và chọn máy chủ trong danh sách app tự tải về. Có điền mật khẩu thì app tự đăng nhập.</p>
+        <h3>Nhập key &amp; thêm tài khoản</h3>
+        <p>Mở app, nhập License Key, rồi thêm tài khoản — từng cái hoặc nhập cả danh sách một lần.</p>
       </div>
       <div class="step">
         <b class="n">03</b>
         <h3>Tích và bấm Mở</h3>
-        <p>Chọn các dòng muốn chạy, bật tác vụ cần làm, rồi <b style="color:var(--amber2)">▶ Mở</b>. Cài một tài khoản xong thì Đồng bộ sang các tài khoản còn lại.</p>
+        <p>Chọn tài khoản, bật việc cần làm, bấm <b style="color:var(--amber2)">▶ Mở</b>. Cài một tài khoản xong thì Đồng bộ sang cả dàn.</p>
       </div>
     </div>
 
     <div class="grid3" style="margin-top:28px">
       <div class="card">
-        <div class="ico">💻</div><h3>Yêu cầu máy</h3>
-        <p>Hỗ trợ từ Windows Server 2012 đến Windows 11, chạy được trên cả VPS. Chỉ cần có WebView2 Runtime (Windows 11 sẵn có; Windows 10 thường đã có qua Microsoft Edge; bản Server cài thêm một lần).</p>
+        <div class="ico">💻</div><h3>Hệ điều hành</h3>
+        <p>V1 chạy Windows Server 2012 đến Windows 11, máy nhà hay VPS. V2 chạy thêm cả Linux (Ubuntu).</p>
         <div class="chips" style="margin-top:14px">
-          <span class="chip hot">Sắp có: Ubuntu</span>
-          <span class="chip hot">Sắp có: macOS</span>
+          <span class="chip hot">Windows</span>
+          <span class="chip hot">Linux · V2</span>
+          <span class="chip">macOS sắp có</span>
         </div>
       </div>
-      <div class="card"><div class="ico">🧠</div><h3>RAM</h3><p>Mỗi tài khoản là một game thật. Bật đồ hoạ thấp và ẩn cửa sổ thì máy 16 GB treo được tầm 25–30 tài khoản.</p></div>
-      <div class="card"><div class="ico">🔐</div><h3>Dữ liệu của bạn</h3><p>Tài khoản, cài đặt và phiên đăng nhập nằm trong thư mục <code>data\</code> cạnh file exe. Mật khẩu được mã hoá theo máy.</p></div>
+      <div class="card"><div class="ico">🧠</div><h3>RAM</h3><p>V1: máy 16 GB treo thoải mái 25–30 tài khoản. V2: VPS cấu hình mạnh gánh 100+ tài khoản.</p></div>
+      <div class="card"><div class="ico">💬</div><h3>Hỗ trợ tận tình</h3><p>Vướng chỗ nào cứ hỏi trong nhóm Zalo, có người hỗ trợ cài đặt lần đầu.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= PLANS ================= -->
 <section class="band" id="banquyen">
   <div class="wrap">
     <div class="center">
       <div class="eyebrow ctr">Bản quyền</div>
       <h2>Dùng thử trước,<br>quyết định sau</h2>
-      <p class="lead">Auto chạy với tài khoản có trong danh sách bản quyền. Chưa có bản quyền thì cửa sổ game vẫn mở và chơi tay bình thường, chỉ các công tắc auto là không chạy.</p>
+      <p class="lead">Chưa có bản quyền vẫn mở game chơi tay bình thường. Có key là bật toàn bộ auto.</p>
     </div>
     <div class="plans">
       <div class="plan">
@@ -672,43 +831,40 @@
         <p style="color:var(--muted);font-size:14px">Mở toàn bộ tính năng để bạn thử trên nhân vật của mình.</p>
         <ul>
           <li>Đủ tính năng, không giới hạn tác vụ</li>
-          <li>Thanh trạng thái hiện số ngày còn lại</li>
+          <li>Dùng được cả Client &amp; Web H5</li>
           <li>Hỗ trợ cài đặt lần đầu</li>
         </ul>
-        <!-- TODO:CONTACT -->
-        <a class="btn btn-ghost" href="#lienhe">Xin bản dùng thử</a>
+        <a class="btn btn-ghost" href="https://zalo.me/g/cuyyjpst6ssfei4cwmlu" target="_blank" rel="noopener">Xin bản dùng thử</a>
       </div>
       <div class="plan best">
         <h3>Theo tháng</h3>
         <div class="price">Liên hệ <small>/ tài khoản / tháng</small></div>
-        <p style="color:var(--muted);font-size:14px">Lựa chọn của phần lớn người dùng chạy vài tài khoản mỗi ngày.</p>
+        <p style="color:var(--muted);font-size:14px">Lựa chọn của phần lớn người chơi chạy vài tài khoản mỗi ngày.</p>
         <ul>
           <li>Toàn bộ 18 nhóm tác vụ</li>
+          <li>Dùng V1 hoặc V2, Client &amp; Web H5</li>
           <li>Cập nhật theo bản game mới</li>
-          <li>Hỗ trợ qua Zalo / Telegram</li>
-          <li>Chạy song song bản Flash cũ</li>
+          <li>Hỗ trợ qua nhóm Zalo</li>
         </ul>
-        <!-- TODO:CONTACT -->
-        <a class="btn btn-primary" href="#lienhe">Liên hệ lấy giá</a>
+        <a class="btn btn-primary" href="https://zalo.me/g/cuyyjpst6ssfei4cwmlu" target="_blank" rel="noopener">Liên hệ lấy giá</a>
       </div>
       <div class="plan">
-        <h3>Gói nhiều tài khoản</h3>
+        <h3>Gói V2 · cả dàn</h3>
         <div class="price">Liên hệ <small>/ theo số TK</small></div>
-        <p style="color:var(--muted);font-size:14px">Cho người chạy cả dàn, cần giá theo lô và hỗ trợ nhanh.</p>
+        <p style="color:var(--muted);font-size:14px">Cho người treo hàng chục, hàng trăm tài khoản trên VPS.</p>
         <ul>
+          <li>Shiba Auto V2: Windows &amp; Linux</li>
           <li>Giá ưu đãi theo số lượng tài khoản</li>
-          <li>Hỗ trợ cấu hình dàn máy</li>
+          <li>Hỗ trợ dựng VPS, cấu hình dàn</li>
           <li>Ưu tiên khi báo lỗi</li>
         </ul>
-        <!-- TODO:CONTACT -->
-        <a class="btn btn-ghost" href="#lienhe">Nhận báo giá</a>
+        <a class="btn btn-ghost" href="https://zalo.me/g/cuyyjpst6ssfei4cwmlu" target="_blank" rel="noopener">Nhận báo giá</a>
       </div>
     </div>
-    <p class="finep center" style="margin-top:22px">Giá cụ thể cập nhật tại kênh liên hệ. Mất mạng tạm thời thì app dùng bản lưu danh sách bản quyền trong tối đa 7 ngày.</p>
+    <p class="finep center" style="margin-top:22px">Giá cụ thể cập nhật trong nhóm Zalo.</p>
   </div>
 </section>
 
-<!-- ================= FAQ ================= -->
 <section class="band alt" id="faq">
   <div class="wrap">
     <div class="center">
@@ -717,61 +873,78 @@
     </div>
     <div class="faq">
       <details open>
-        <summary>Shiba Auto chạy bản game nào?</summary>
-        <p>Bản web (H5) của Võ Lâm Chi Mộng. App mở game trong cửa sổ riêng của nó và điều khiển trực tiếp, nên không cần mở thêm trình duyệt hay giả lập. App cũng chạy song song được với bản auto Flash cũ vì khác tên và khác thư mục dữ liệu.</p>
+        <summary>Shiba Auto hỗ trợ những game nào?</summary>
+        <p>Các game nền tảng VLCM: Võ Lâm Chi Mộng, Võ Lâm Chân Mệnh, Mộng Chí Tôn, Mộng Kiếm Hiệp. Dùng được trên cả bản Client lẫn bản Web H5.</p>
+      </details>
+      <details>
+        <summary>Tôi chơi bản Client hay Web H5 thì dùng bản nào?</summary>
+        <p>Cả hai đều có. Bản Web H5 được tối ưu riêng nên nhẹ hơn và treo được nhiều tài khoản hơn trên cùng một máy. Bạn có thể dùng song song cả hai.</p>
+      </details>
+      <details>
+        <summary>Nên chọn V1 hay V2?</summary>
+        <p>Cả hai có đủ bộ tính năng auto. V1 là ứng dụng Windows trực quan, mỗi tài khoản một cửa sổ — hợp với người chơi vài đến vài chục tài khoản trên máy nhà. V2 dành cho người chạy số lượng lớn: chạy được trên cả Windows và Linux, chạy ngầm 24/7 trên VPS, điều khiển từ xa qua trình duyệt (kể cả điện thoại), tự cập nhật định kỳ và treo được 100+ tài khoản trên một VPS.</p>
       </details>
       <details>
         <summary>Chạy được bao nhiêu tài khoản một lúc?</summary>
-        <p>Phụ thuộc RAM. Máy 16 GB treo được tầm 25–30 tài khoản khi bật đồ hoạ thấp và ẩn cửa sổ game. Cửa sổ game được chia theo tiến trình (mặc định khoảng 4 tài khoản mỗi tiến trình, đổi được trong Cài đặt) để bảng điều khiển vẫn mượt khi máy nặng. Khi mở nhiều tài khoản, nên tích tất cả, ẩn cửa sổ, rồi mới bấm Mở.</p>
+        <p>Tuỳ cấu hình máy. Với V1, máy nhà 16 GB treo thoải mái 25–30 tài khoản. Với V2 trên VPS cấu hình mạnh, một máy gánh được 100+ tài khoản. Cần tư vấn cấu hình cho dàn của bạn thì hỏi trong nhóm Zalo.</p>
       </details>
       <details>
-        <summary>Máy nào chạy được? Có chạy trên VPS không?</summary>
-        <p>Hỗ trợ từ Windows Server 2012 đến Windows 11, kể cả Server 2016/2019/2022 — nên chạy trên VPS bình thường, cắm VPS treo cả ngày không cần bật máy nhà. Máy chỉ cần có WebView2 Runtime: Windows 11 đã sẵn, Windows 10 thường có qua Microsoft Edge, còn bản Server thì cài thêm một lần là xong. Bản cho Ubuntu và macOS đang được làm và sẽ có trong thời gian tới.</p>
+        <summary>Có chạy được trên VPS, Linux không?</summary>
+        <p>Có. V1 chạy trên Windows Server 2012 đến Windows 11, kể cả VPS. V2 chạy thêm cả Linux (Ubuntu) — thuê VPS Linux giá rẻ là treo được cả ngày, không cần bật máy nhà. macOS sắp có.</p>
+      </details>
+      <details>
+        <summary>Điều khiển từ điện thoại được không?</summary>
+        <p>Được, với V2. Dashboard mở được bằng trình duyệt trên điện thoại hoặc máy khác, có đặt mật khẩu để chỉ bạn vào được.</p>
       </details>
       <details>
         <summary>Mật khẩu của tôi có an toàn không?</summary>
-        <p>Mật khẩu lưu trong <code>data\accounts.xml</code> ở dạng mã hoá gắn với đúng máy và đúng người dùng Windows đã lưu nó — copy file sang máy khác sẽ không giải mã được. Muốn chuyển máy thì dùng chức năng xuất tài khoản dành riêng cho việc đó.</p>
+        <p>Mật khẩu được mã hoá và gắn với máy của bạn — copy sang máy khác sẽ không đọc được. Muốn chuyển máy thì dùng chức năng xuất tài khoản.</p>
       </details>
       <details>
-        <summary>Bot có tốn TPoint hay vật phẩm của tôi không?</summary>
-        <p>Không. Khi cần sang map khác (bãi train, điểm bắt ngựa, NPC phó bản), bot dùng truyền tống nếu có thẻ tuần Võ Lâm Lệnh, còn không thì chạy bộ. Bot không bao giờ bấm "Dùng TPoint đến".</p>
+        <summary>Auto có tốn TPoint hay vật phẩm của tôi không?</summary>
+        <p>Không. Auto thao tác như người chơi thật và không bao giờ tự dùng TPoint. Di chuyển xa thì dùng truyền tống nếu có thẻ tuần, không thì chạy bộ.</p>
       </details>
       <details>
-        <summary>Hết thuốc hoặc hỏng đồ giữa lúc train thì sao?</summary>
-        <p>App tự xử lý: đồ đang mặc về 0 độ bền và đủ bạc thì tắt Treo máy, về Tương Dương sửa rồi quay lại bãi. Hết thuốc thì về NPC mua đủ số lượng bạn khai trong ô "Thuốc cần mua". Nếu 90 giây không xong thì dừng, nghỉ 5 phút rồi thử lại, và Treo máy luôn được bật lại.</p>
-      </details>
-      <details>
-        <summary>Cài đặt cho nhiều tài khoản có phải làm lại từ đầu?</summary>
-        <p>Không. Cấu hình xong một tài khoản thì bấm Đồng bộ để chép sang các tài khoản đã tích — chép tất cả, hoặc chỉ chép riêng toạ độ train, phó bản, nhặt đồ… tuỳ bạn chọn.</p>
-      </details>
-      <details>
-        <summary>Cập nhật thế nào?</summary>
-        <p>Mỗi lần mở, app tự kiểm bản mới. Có bản mới thì hiện hộp thoại: đồng ý là app đóng và tự mở lại bản mới (cửa sổ game đang mở sẽ bị đóng, cần mở lại). Chỉ file exe được thay, thư mục <code>data\</code> giữ nguyên. Tắt tự kiểm được trong Cài đặt.</p>
+        <summary>Mua bản quyền, xin dùng thử ở đâu?</summary>
+        <p>Vào nhóm Zalo <a href="https://zalo.me/g/cuyyjpst6ssfei4cwmlu" target="_blank" rel="noopener" style="color:var(--amber2)">zalo.me/g/cuyyjpst6ssfei4cwmlu</a> hoặc quét mã QR ở cuối trang. Giá, key dùng thử và hướng dẫn đều có trong nhóm.</p>
       </details>
     </div>
 
     <div class="notice">
       <div class="ico">⚠️</div>
-      <p><b>Lưu ý về rủi ro.</b> Dùng công cụ tự động là bạn tự chịu rủi ro với tài khoản của mình: nhà phát hành có thể coi việc treo máy tự động là vi phạm điều khoản sử dụng. Shiba Auto là công cụ hỗ trợ thao tác, không bảo đảm an toàn tuyệt đối cho tài khoản. Một tài khoản chỉ nên mở một cửa sổ trên cùng một máy chủ.</p>
+      <p><b>Lưu ý về rủi ro.</b> Dùng công cụ tự động là bạn tự chịu rủi ro với tài khoản của mình: nhà phát hành có thể coi việc treo máy tự động là vi phạm điều khoản sử dụng. Shiba Auto là công cụ hỗ trợ thao tác, không bảo đảm an toàn tuyệt đối cho tài khoản.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= FINAL CTA ================= -->
-<section style="padding:0 24px" id="lienhe">
+<section class="band" style="padding-bottom:0" id="lienhe">
   <div class="final">
-    <div class="eyebrow ctr">Sẵn sàng</div>
-    <h2>Để Shiba lo phần việc lặp lại.</h2>
-    <p class="lead center" style="margin:18px auto 0">Tải về, thêm tài khoản, bấm Mở. Phần còn lại của buổi tối là của bạn.</p>
-    <div class="cta" style="justify-content:center">
-      <!-- TODO:DOWNLOAD -->
-      <a class="btn btn-primary" href="#">Tải Shiba Auto cho Windows</a>
-      <!-- TODO:GUIDE -->
-      <a class="btn btn-ghost" href="#">Xem hướng dẫn sử dụng</a>
+    <div class="eyebrow ctr">Tham gia cộng đồng</div>
+    <h2>Vào nhóm Zalo Shiba Auto</h2>
+    <p class="lead center" style="margin:18px auto 0">Nhận key dùng thử, báo giá, hướng dẫn cài đặt và thông báo bản mới — tất cả trong một nhóm.</p>
+    <div class="zalo">
+      <a class="qrbox" href="https://zalo.me/g/cuyyjpst6ssfei4cwmlu" target="_blank" rel="noopener" aria-label="Mã QR vào nhóm Zalo Shiba Auto">
+        <svg class="qr" role="img" aria-label="QR nhóm Zalo Shiba Auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31" shape-rendering="crispEdges"><path fill="#ffffff" d="M0 0h31v31H0z"/><path stroke="#0a0d12" d="M1 1.5h7m3 0h4m2 0h5m1 0h7M1 2.5h1m5 0h1m5 0h1m1 0h5m1 0h1m1 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m1 0h1m1 0h1m4 0h2m1 0h1m3 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h3m2 0h2m2 0h1m1 0h2m1 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m1 0h1m3 0h1m1 0h3m1 0h1m1 0h1m1 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h1m1 0h3m1 0h1m1 0h1m1 0h1M1 9.5h1m1 0h5m2 0h1m5 0h3m1 0h2m1 0h5M4 10.5h1m1 0h1m2 0h2m1 0h1m1 0h1m2 0h1m2 0h4m1 0h1m3 0h1M1 11.5h1m1 0h7m3 0h7m1 0h1m1 0h2M1 12.5h1m1 0h2m1 0h1m2 0h1m2 0h3m6 0h4m1 0h1m1 0h1M3 13.5h1m1 0h1m1 0h3m1 0h1m3 0h2m1 0h1m2 0h1m4 0h2M1 14.5h1m4 0h1m5 0h2m3 0h1m2 0h6m3 0h1M1 15.5h1m1 0h2m2 0h3m1 0h3m2 0h1m4 0h1m1 0h1m1 0h3M1 16.5h1m4 0h1m1 0h1m4 0h1m1 0h3m1 0h2m3 0h1m3 0h1M4 17.5h1m1 0h3m3 0h1m3 0h4m6 0h2M1 18.5h4m1 0h1m1 0h2m2 0h1m1 0h2m4 0h6m1 0h1m1 0h1M1 19.5h1m1 0h2m1 0h2m1 0h3m2 0h5m2 0h1m2 0h2m1 0h1M1 20.5h1m1 0h3m3 0h1m1 0h1m1 0h2m1 0h1m2 0h3m3 0h1m2 0h1M1 21.5h1m1 0h1m3 0h1m2 0h1m1 0h1m2 0h1m2 0h1m1 0h6m1 0h3M9 22.5h5m3 0h1m3 0h1m3 0h5M1 23.5h7m8 0h6m1 0h1m1 0h3M1 24.5h1m5 0h1m1 0h1m1 0h3m1 0h3m3 0h1m3 0h1m2 0h2M1 25.5h1m1 0h3m1 0h1m1 0h1m3 0h1m2 0h1m1 0h1m2 0h5m1 0h1M1 26.5h1m1 0h3m1 0h1m1 0h1m1 0h5m1 0h1m2 0h3m3 0h4M1 27.5h1m1 0h3m1 0h1m1 0h3m2 0h3m1 0h3m1 0h7M1 28.5h1m5 0h1m3 0h3m3 0h1m3 0h1m1 0h1m2 0h1m1 0h1M1 29.5h7m1 0h1m6 0h1m1 0h1m1 0h1m2 0h1m2 0h2"/></svg>
+        <p>Quét bằng Zalo để vào nhóm</p>
+      </a>
+      <div>
+        <ul>
+          <li>Key dùng thử miễn phí</li>
+          <li>Hỗ trợ cài đặt, dựng VPS cho V2</li>
+          <li>Báo lỗi, góp ý tính năng mới</li>
+          <li>Thông báo cập nhật sớm nhất</li>
+        </ul>
+        <div class="cta" style="margin-top:0">
+          <a class="btn btn-zalo" href="https://zalo.me/g/cuyyjpst6ssfei4cwmlu" target="_blank" rel="noopener">💬 Vào nhóm Zalo</a>
+          <a class="btn btn-ghost" href="https://zalo.me/g/cuyyjpst6ssfei4cwmlu" target="_blank" rel="noopener">Tải Shiba Auto</a>
+        </div>
+      </div>
     </div>
-    <p class="finep">Gói ZIP đầy đủ · Windows Server 2012 → Windows 11, chạy cả trên VPS · Bản Ubuntu và macOS sắp có · Tải và sử dụng nghĩa là bạn đã đồng ý điều khoản sử dụng.</p>
+    <p class="finep">V1 &amp; V2 · Client &amp; Web H5 · Windows / Linux / VPS</p>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
@@ -781,35 +954,26 @@
           <span class="mark" role="img" aria-label="Shiba Auto"></span>
           Shiba<span style="color:var(--amber)">Auto</span>
         </a>
-        <p style="color:var(--dim);font-size:14px;max-width:34ch">Phần mềm hỗ trợ chơi Võ Lâm Chi Mộng bản web trên Windows.</p>
+        <p style="color:var(--dim);font-size:14px;max-width:36ch">Auto VLCM cho Client &amp; Web H5 — Võ Lâm Chi Mộng, Võ Lâm Chân Mệnh, Mộng Chí Tôn, Mộng Kiếm Hiệp.</p>
       </div>
       <div class="fcol">
         <h4>Sản phẩm</h4>
+        <a href="#phienban">Shiba Auto V1 &amp; V2</a>
+        <a href="#nentang">Client &amp; Web H5</a>
         <a href="#tinhnang">Tính năng</a>
-        <a href="#bangdieukhien">Bảng điều khiển</a>
         <a href="#banquyen">Bản quyền</a>
-        <!-- TODO:VERSION — link changelog -->
-        <a href="#">Lịch sử phiên bản</a>
       </div>
       <div class="fcol">
         <h4>Hỗ trợ</h4>
-        <!-- TODO:GUIDE -->
         <a href="#batdau">Hướng dẫn cài đặt</a>
         <a href="#faq">Hỏi đáp</a>
-        <!-- TODO:CONTACT -->
-        <a href="#">Báo lỗi</a>
-        <a href="#">Zalo / Telegram</a>
-      </div>
-      <div class="fcol">
-        <h4>Khác</h4>
-        <!-- TODO:LEGAL -->
-        <a href="#">Điều khoản sử dụng</a>
-        <a href="#">Chính sách dữ liệu</a>
+        <a href="https://zalo.me/g/cuyyjpst6ssfei4cwmlu" target="_blank" rel="noopener">Báo lỗi</a>
+        <a href="https://zalo.me/g/cuyyjpst6ssfei4cwmlu" target="_blank" rel="noopener">Nhóm Zalo</a>
       </div>
     </div>
     <div class="copy">
       <span>© 2026 Shiba Auto. Không liên kết với nhà phát hành game.</span>
-      <span>Made by linhdb</span>
+      <span>Made by ShibaAuto</span>
     </div>
   </div>
 </footer>
